@@ -9,8 +9,8 @@ gem "minimal-mistakes-jekyll"
 
 # gem "github-pages", group: :jekyll_plugins
 gem "jekyll-include-cache", group: :jekyll_plugins
-gem "bibtex-ruby", "6.0.0", group: :jekyll_plugins
-gem "jekyll-scholar", "7.0.0", group: :jekyll_plugins
+gem "bibtex-ruby", group: :jekyll_plugins
+gem "jekyll-scholar", group: :jekyll_plugins
 gem "jekyll-pdf-embed", group: :jekyll_plugins
 
 # If you have any plugins, put them here!

@@ -1,8 +1,8 @@
 ---
 layout: single
 classes: wide
-title: Bibligraphies
-permalink: /bibs/
+title: References
+permalink: /refs/
 ---
 
 ## Journal Articles

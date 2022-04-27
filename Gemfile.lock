@@ -158,14 +158,14 @@ PLATFORMS
   x64-mingw-ucrt
 
 DEPENDENCIES
-  bibtex-ruby (= 6.0.0)
+  bibtex-ruby
   jekyll-algolia
   jekyll-feed
   jekyll-gist
   jekyll-include-cache
   jekyll-paginate
   jekyll-pdf-embed
-  jekyll-scholar (= 7.0.0)
+  jekyll-scholar
   jekyll-sitemap
   minimal-mistakes-jekyll
   tzinfo-data

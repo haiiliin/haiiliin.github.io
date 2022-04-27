@@ -7,8 +7,8 @@ main:
     url: /tags/
   - title: "Collections"
     url: /collection-archive/
-  - title: "Bibligraphies"
-    url: /bibs/
+  - title: "References"
+    url: /refs/
   - title: "Search"
     url: /search/
   - title: "GitHub"
