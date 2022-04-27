@@ -1,0 +1,15 @@
+main:
+  - title: "Posts"
+    url: /year-archive/
+  - title: "Categories"
+    url: /categories/
+  - title: "Tags"
+    url: /tags/
+  - title: "Collections"
+    url: /collection-archive/
+  - title: "Bibligraphies"
+    url: /bibs/
+  - title: "Search"
+    url: /search/
+  - title: "GitHub"
+    url: https://github.com/haiiliin
