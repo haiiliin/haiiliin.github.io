@@ -1,0 +1,65 @@
+{
+    "posts": {
+        "yang2021-nag": {
+            "name": "yang2021-nag",
+            "year": 2022,
+            "month": 4,
+            "day": 27,
+            "title": "Soil-structure interface modeling with the nonlinear incremental approach",
+            "abstract": "This paper aims to develop the nonlinear incremental modeling approach for describing both monotonic and cyclic behaviors of the soil-structure interface. An exponential function is adopted as an example to reproduce the asymptotic relationship between the interface shear stress ratio and the shear displacement. A stress-dilatancy relation is developed for the shear-induced change of interface thickness. A shear stress reversal technique is incorporated for cyclic loading effect. Then, three numerical schemes for simulating constant thickness, constant normal load, and constant normal stiffness tests are established respectively. Next, three modifications are made to enhance the model by introducing a nonlinear shear modulus, the critical state concept, and the grain breakage effect. The enhanced model is evaluated with satisfactory performance in simulating interface tests under various loading conditions. Furthermore, the extensions to other nonlinear incremental interface model and clay-structure interface modeling with rate effect relating to drainage conditions are successfully demonstrated and discussed.",
+            "permalink": "/yang2021-nag/",
+            "options": {
+                "classes": "wide"
+            },
+            "categories": [
+                "Article",
+                "Simulation",
+                "Constitutive Model",
+                "SSI",
+                "Optimization"
+            ],
+            "tags": [
+                "Exponential",
+                "Critical State",
+                "Particle Breakage",
+                "Grain Size Distribution",
+                "Cyclic Loading",
+                "Fontainbleau Sand",
+                "Hostun Sand"
+            ],
+            "publisher_link": "https://doi.org/10.1002/nag.3206",
+            "google_scholar_link": "https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=Soil‐structure+interface+modeling+with+the+nonlinear+incremental+approach&btnG=",
+            "pdf_path": "/assets/bibliographies/Yang2021-Soil-structure-interface-modeling-with-the-nonlinear-incremental-approach.pdf",
+            "bib_key": "Yang2021Nag"
+        },
+        "yin2018-j-eng-mech": {
+            "name": "yin2018-j-eng-mech",
+            "year": 2022,
+            "month": 4,
+            "day": 27,
+            "title": "Modeling Monotonic and Cyclic Behavior of Granular Materials by Exponential Constitutive Function",
+            "abstract": "It is still an open problem to develop a model with a uniform theoretical treatment under various loading conditions. This paper aims to formulate such a model for describing both monotonic and cyclic behaviors of granular materials. An exponential function was adopted to reproduce the stress-strain relation. Within the framework of endochronic models, the shear strain component was enriched with an absolute term to account for a reverse loading effect during shearing. The capacity of the basic model with four parameters for reproducing the basic features of granular materials was examined. Three numerical schemes for simulating undrained triaxial tests, drained triaxial tests under constant p′ or under constant confining stress, and under both monotonic and cyclic loadings were established. Then, three modifications were carried out to enhance the model by introducing a nonlinear elasticity, a nonlinear stress dilatancy, and the critical state concept with four additional parameters. The enhanced version of the model showed good performances in simulating triaxial tests on Toyoura sand under various loading conditions: drained, undrained, constant p′, constant confining stress, and monotonic and cyclic loadings.",
+            "permalink": "/yin2018-j-eng-mech/",
+            "options": {
+                "classes": "wide"
+            },
+            "categories": [
+                "Article",
+                "Simulation",
+                "Constitutive Model",
+                "Optimization"
+            ],
+            "tags": [
+                "Exponential",
+                "Critical State",
+                "Particle Breakage",
+                "Cyclic Loading",
+                "Toyoura Sand"
+            ],
+            "publisher_link": "https://doi.org/10.1061/(ASCE)EM.1943-7889.0001437",
+            "google_scholar_link": "https://scholar.google.com/scholar?hl=en&as_sdt=0%2C5&q=Modeling+Monotonic+and+Cyclic+Behavior+of+Granular+Materials+by+Exponential+Constitutive+Function&btnG=",
+            "pdf_path": "/assets/bibliographies/Yin2018-Modeling-Monotonic-and-Cyclic-Behavior-of-Granular-Materials-by-Exponential-Constitutive-Function.pdf",
+            "bib_key": "Yin2018JEngMech"
+        }
+    }
+}
