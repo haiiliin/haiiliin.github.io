@@ -1,2 +1,1 @@
-from .Post import Post
-from .Posts import Posts
+from .Post import Post, Posts
