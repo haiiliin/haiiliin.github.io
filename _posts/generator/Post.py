@@ -200,8 +200,8 @@ class Posts(DataClass):
             A Posts object
         """
         obj = cls()
-        for key, value in posts.items():
-            obj.posts[key] = Post.readDictionary(value)
+        for key, post in posts.items():
+            obj.posts[key] = Post.readDictionary(post)
         return obj
 
     @classmethod
@@ -217,8 +217,8 @@ class Posts(DataClass):
         fileDir : str
             File dir of the generated posts
         """
-        for generator in self.posts.values():
-            generator.generate(fileDir)
+        for post in self.posts.values():
+            post.generate(fileDir)
 
     def new(self, name: str, year: int, month: int, day: int, title: str, abstract: str, permalink: str,
             options: dict[str, str] = None, categories: list[str] = None, tags: list[str] = None,
@@ -259,7 +259,7 @@ class Posts(DataClass):
 
         Returns
         -------
-        generator : Post
+        post : Post
             A PostGenerator object
         """
         if options is None:
@@ -269,7 +269,7 @@ class Posts(DataClass):
         if tags is None:
             tags = []
 
-        generator = Post(name, year, month, day, title, abstract, permalink, options, categories, tags,
+        post = Post(name, year, month, day, title, abstract, permalink, options, categories, tags,
                          publisher_link, google_scholar_link, pdf_path, bib_key)
-        self.posts.update({name: generator})
-        return generator
+        self.posts.update({name: post})
+        return post
