@@ -8,6 +8,8 @@ from enum import IntEnum
 class NodeType(IntEnum):
     String = 0
     Number = 1
+    IntNumber = 1
+    RealNumber = 1
     Boolean = 2
     Null = 3
     Dictionary = 4
@@ -15,14 +17,21 @@ class NodeType(IntEnum):
 
 
 class NodeBase:
-    pass
+
+    @property
+    def type(self):
+        raise NotImplementedError
 
 
-class StringNode(NodeBase):
+class StringNode(NodeBase, str):
     text: str
 
     def __init__(self, text: str):
         self.text = text
+
+    @property
+    def type(self):
+        return NodeType.String
 
 
 class NumberNode(NodeBase):
@@ -31,12 +40,33 @@ class NumberNode(NodeBase):
     def __init__(self, value: numbers.Number):
         self.value = value
 
+    def __repr__(self):
+        return str(self.value)
 
-class BooleanNode(NodeBase):
-    value: bool
+    @property
+    def type(self):
+        return NodeType.Number
 
-    def __init__(self, value: bool):
-        self.value = value
+
+class IntNumberNode(NumberNode, int):
+
+    @property
+    def type(self):
+        return NodeType.IntNumber
+
+
+class RealNumberNode(NumberNode, float):
+
+    @property
+    def type(self):
+        return NodeType.RealNumber
+
+
+class BooleanNode(NumberNode, int):
+
+    @property
+    def type(self):
+        return NodeType.Boolean
 
 
 class DictionaryNode(NodeBase, dict):
@@ -46,29 +76,42 @@ class DictionaryNode(NodeBase, dict):
         for key, value in data.items():
             self[key] = parse_node(value)
 
+    @property
+    def type(self):
+        return NodeType.Dictionary
 
-class ArrayNode(NodeBase):
-    array: list
+
+class ArrayNode(NodeBase, list[NodeBase]):
 
     def __init__(self, array: list):
-        self.array = []
+        super().__init__()
         for item in array:
-            self.array.append(parse_node(item))
+            self.append(parse_node(item))
+
+    @property
+    def type(self):
+        return NodeType.Array
 
 
 class NullNode(NodeBase):
 
     def __init__(self):
-        self.value = None
+        pass
+
+    @property
+    def type(self):
+        return NodeType.Null
 
 
 def parse_node(data: typing.Union[str, int, float, bool, None, dict, list]) -> NodeBase:
     if isinstance(data, str):
         return StringNode(data)
-    elif isinstance(data, numbers.Number) and not isinstance(data, bool):
-        return NumberNode(data)
     elif isinstance(data, bool):
         return BooleanNode(data)
+    elif isinstance(data, numbers.Integral):
+        return IntNumberNode(data)
+    elif isinstance(data, numbers.Real):
+        return RealNumberNode(data)
     elif isinstance(data, dict):
         return DictionaryNode(data)
     elif isinstance(data, list):
