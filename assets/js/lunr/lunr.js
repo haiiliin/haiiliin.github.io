@@ -395,7 +395,7 @@ lunr.Token.prototype.clone = function (fn) {
 /**
  * A function for splitting a string into tokens ready to be inserted into
  * the search index. Uses `lunr.tokenizer.separator` to split strings, change
- * the value of this property to change how strings are split into tokens.
+ * the data of this property to change how strings are split into tokens.
  *
  * This tokenizer will convert its parameter to a string by calling `toString` and
  * then will split this string on the character in `lunr.tokenizer.separator`.
@@ -744,12 +744,12 @@ lunr.Pipeline.prototype.toJSON = function () {
  * loading a previously dumped vector the raw elements can be provided to the constructor.
  *
  * For performance reasons vectors are implemented with a flat array, where an elements
- * index is immediately followed by its value. E.g. [index, value, index, value]. This
+ * index is immediately followed by its data. E.g. [index, data, index, data]. This
  * allows the underlying array to be as sparse as possible and still offer decent
  * performance when being used for vector calculations.
  *
  * @constructor
- * @param {Number[]} [elements] - The flat list of element index and element value pairs.
+ * @param {Number[]} [elements] - The flat list of element index and element data pairs.
  */
 lunr.Vector = function (elements) {
   this._magnitude = 0
@@ -761,7 +761,7 @@ lunr.Vector = function (elements) {
  * Calculates the position within the vector to insert a given index.
  *
  * This is used internally by insert and upsert. If there are duplicate indexes then
- * the position is returned as if the value for that index were to be updated, but it
+ * the position is returned as if the data for that index were to be updated, but it
  * is the callers responsibility to check whether there is a duplicate at that index
  *
  * @param {Number} insertIdx - The index at which the element should be inserted.
@@ -817,7 +817,7 @@ lunr.Vector.prototype.positionForIndex = function (index) {
  * for this index.
  *
  * @param {Number} insertIdx - The index at which the element should be inserted.
- * @param {Number} val - The value to be inserted into the vector.
+ * @param {Number} val - The data to be inserted into the vector.
  */
 lunr.Vector.prototype.insert = function (insertIdx, val) {
   this.upsert(insertIdx, val, function () {
@@ -829,9 +829,9 @@ lunr.Vector.prototype.insert = function (insertIdx, val) {
  * Inserts or updates an existing index within the vector.
  *
  * @param {Number} insertIdx - The index at which the element should be inserted.
- * @param {Number} val - The value to be inserted into the vector.
- * @param {function} fn - A function that is called for updates, the existing value and the
- * requested value are passed as arguments
+ * @param {Number} val - The data to be inserted into the vector.
+ * @param {function} fn - A function that is called for updates, the existing data and the
+ * requested data are passed as arguments
  */
 lunr.Vector.prototype.upsert = function (insertIdx, val, fn) {
   this._magnitude = 0
@@ -2097,7 +2097,7 @@ lunr.Index.prototype.query = function (fn) {
 
           /*
            * The query field vector is populated using the termIndex found for
-           * the term and a unit value with the appropriate boost applied.
+           * the term and a unit data with the appropriate boost applied.
            * Using upsert because there could already be an entry in the vector
            * for the term we are working with. In that case we just add the scores
            * together.
@@ -2341,8 +2341,8 @@ lunr.Index.load = function (serializedIndex) {
  * @property {lunr.Pipeline} pipeline - The pipeline performs text processing on tokens before indexing.
  * @property {lunr.Pipeline} searchPipeline - A pipeline for processing search terms before querying the index.
  * @property {number} documentCount - Keeps track of the total number of documents indexed.
- * @property {number} _b - A parameter to control field length normalization, setting this to 0 disabled normalization, 1 fully normalizes field lengths, the default value is 0.75.
- * @property {number} _k1 - A parameter to control how quickly an increase in term frequency results in term frequency saturation, the default value is 1.2.
+ * @property {number} _b - A parameter to control field length normalization, setting this to 0 disabled normalization, 1 fully normalizes field lengths, the default data is 0.75.
+ * @property {number} _k1 - A parameter to control how quickly an increase in term frequency results in term frequency saturation, the default data is 1.2.
  * @property {number} termIndex - A counter incremented for each unique term, used to identify a terms position in the vector space.
  * @property {array} metadataWhitelist - A list of metadata keys that have been whitelisted for entry in the index.
  */
@@ -2421,11 +2421,11 @@ lunr.Builder.prototype.field = function (fieldName, attributes) {
 
 /**
  * A parameter to tune the amount of field length normalisation that is applied when
- * calculating relevance scores. A value of 0 will completely disable any normalisation
- * and a value of 1 will fully normalise field lengths. The default is 0.75. Values of b
+ * calculating relevance scores. A data of 0 will completely disable any normalisation
+ * and a data of 1 will fully normalise field lengths. The default is 0.75. Values of b
  * will be clamped to the range 0 - 1.
  *
- * @param {number} number - The value to set for this tuning parameter.
+ * @param {number} number - The data to set for this tuning parameter.
  */
 lunr.Builder.prototype.b = function (number) {
   if (number < 0) {
@@ -2439,10 +2439,10 @@ lunr.Builder.prototype.b = function (number) {
 
 /**
  * A parameter that controls the speed at which a rise in term frequency results in term
- * frequency saturation. The default value is 1.2. Setting this to a higher value will give
- * slower saturation levels, a lower value will result in quicker saturation.
+ * frequency saturation. The default data is 1.2. Setting this to a higher data will give
+ * slower saturation levels, a lower data will result in quicker saturation.
  *
- * @param {number} number - The value to set for this tuning parameter.
+ * @param {number} number - The data to set for this tuning parameter.
  */
 lunr.Builder.prototype.k1 = function (number) {
   this._k1 = number
@@ -2842,7 +2842,7 @@ lunr.Query.wildcard.TRAILING = 2
  */
 lunr.Query.presence = {
   /**
-   * Term's presence in a document is optional, this is the default value.
+   * Term's presence in a document is optional, this is the default data.
    */
   OPTIONAL: 1,
 
@@ -3243,7 +3243,7 @@ lunr.QueryParser.parseClause = function (parser) {
       var errorMessage = "expected either a field or a term, found " + lexeme.type
 
       if (lexeme.str.length >= 1) {
-        errorMessage += " with value '" + lexeme.str + "'"
+        errorMessage += " with data '" + lexeme.str + "'"
       }
 
       throw new lunr.QueryParseError (errorMessage, lexeme.start, lexeme.end)
@@ -3466,9 +3466,9 @@ lunr.QueryParser.parseBoost = function (parser) {
     }
   }(this, function () {
     /**
-     * Just return a value to define the module export.
+     * Just return a data to define the module export.
      * This example returns an object, but the module
-     * can return a function as the exported value.
+     * can return a function as the exported data.
      */
     return lunr
   }))
