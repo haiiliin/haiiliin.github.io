@@ -62,7 +62,7 @@ class RealNumberNode(NumberNode, float):
         return NodeType.RealNumber
 
 
-class BooleanNode(NumberNode, int):
+class BooleanNumberNode(NumberNode, int):
 
     @property
     def type(self):
@@ -93,21 +93,21 @@ class ArrayNode(NodeBase, list[NodeBase]):
         return NodeType.Array
 
 
-class NullNode(NodeBase):
+# class NullNode(NodeBase):
+#
+#     def __init__(self):
+#         pass
+#
+#     @property
+#     def type(self):
+#         return NodeType.Null
 
-    def __init__(self):
-        pass
 
-    @property
-    def type(self):
-        return NodeType.Null
-
-
-def parse_node(data: typing.Union[str, int, float, bool, None, dict, list]) -> NodeBase:
+def parse_node(data: typing.Union[str, int, float, bool, None, dict, list]) -> typing.Union[NodeBase, None]:
     if isinstance(data, str):
         return StringNode(data)
     elif isinstance(data, bool):
-        return BooleanNode(data)
+        return BooleanNumberNode(data)
     elif isinstance(data, numbers.Integral):
         return IntNumberNode(data)
     elif isinstance(data, numbers.Real):
@@ -117,7 +117,7 @@ def parse_node(data: typing.Union[str, int, float, bool, None, dict, list]) -> N
     elif isinstance(data, list):
         return ArrayNode(data)
     elif data is None:
-        return NullNode()
+        return None
     else:
         raise ValueError('{} is not JSON serializable')
 
