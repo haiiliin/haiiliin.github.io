@@ -39,11 +39,12 @@ class BooleanNode(NodeBase):
         self.value = value
 
 
-class DictionaryNode(NodeBase):
+class DictionaryNode(NodeBase, dict):
 
     def __init__(self, data: dict):
+        super().__init__()
         for key, value in data.items():
-            setattr(self, key, parse_node(value))
+            self[key] = parse_node(value)
 
 
 class ArrayNode(NodeBase):
