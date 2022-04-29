@@ -16,6 +16,15 @@ class NodeType(IntEnum):
     Array = 5
 
 
+class JSONEncoder(json.JSONEncoder):
+
+    def default(self, o):
+        if isinstance(o, NoneNode):
+            return None
+        else:
+            return o
+
+
 class NodeBase:
 
     @property
@@ -93,7 +102,20 @@ class ArrayNode(NodeBase, list[NodeBase]):
         return NodeType.Array
 
 
-def parse_node(data: typing.Union[str, int, float, bool, None, dict, list]) -> typing.Union[NodeBase, None]:
+class NoneNode(NodeBase):
+
+    def __repr__(self):
+        return repr(None)
+
+    def __str__(self):
+        return str(None)
+
+    @property
+    def type(self):
+        return NodeType.Null
+
+
+def parse_node(data: typing.Union[str, int, float, bool, None, dict, list]) -> NodeBase:
     if isinstance(data, str):
         return StringNode(data)
     elif isinstance(data, bool):
@@ -107,12 +129,16 @@ def parse_node(data: typing.Union[str, int, float, bool, None, dict, list]) -> t
     elif isinstance(data, list):
         return ArrayNode(data)
     elif data is None:
-        return None
+        return NoneNode()
     else:
         raise ValueError('{} is not JSON serializable')
 
 
 class JSONObject(DictionaryNode):
+    """
+    A JSON object. If you are using null values, pass JSONEncoder to the cls argument of json.dumps(), i.e.,
+    json.dumps(..., cls=JSONEncoder)
+    """
 
     @typing.overload
     def __init__(self, data: dict):

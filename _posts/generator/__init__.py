@@ -1,2 +1,2 @@
+from .JSONObject import JSONObject, NodeType, JSONEncoder
 from .Post import Post, Posts
-from .JSONObject import JSONObject, NodeType
