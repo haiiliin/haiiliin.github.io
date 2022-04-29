@@ -93,16 +93,6 @@ class ArrayNode(NodeBase, list[NodeBase]):
         return NodeType.Array
 
 
-# class NullNode(NodeBase):
-#
-#     def __init__(self):
-#         pass
-#
-#     @property
-#     def type(self):
-#         return NodeType.Null
-
-
 def parse_node(data: typing.Union[str, int, float, bool, None, dict, list]) -> typing.Union[NodeBase, None]:
     if isinstance(data, str):
         return StringNode(data)
