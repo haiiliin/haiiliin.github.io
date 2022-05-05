@@ -1,0 +1,736 @@
+<!doctype html>
+<!--
+  Minimal Mistakes Jekyll Theme 4.24.0 by Michael Rose
+  Copyright 2013-2020 Michael Rose - mademistakes.com | @mmistakes
+  Free for personal and commercial use under the MIT license
+  https://github.com/mmistakes/minimal-mistakes/blob/master/LICENSE
+-->
+<html lang="en" class="no-js">
+  <head>
+    <meta charset="utf-8">
+
+<!-- begin _includes/seo.html --><title>Modeling Monotonic and Cyclic Behavior of Granular Materials by Exponential Constitutive Function - WANG Hailin’s blog website</title>
+<meta name="description" content="Abstract">
+
+
+  <meta name="author" content="WANG Hailin">
+  
+  <meta property="article:author" content="WANG Hailin">
+  
+
+
+<meta property="og:type" content="article">
+<meta property="og:locale" content="en_US">
+<meta property="og:site_name" content="WANG Hailin's blog website">
+<meta property="og:title" content="Modeling Monotonic and Cyclic Behavior of Granular Materials by Exponential Constitutive Function">
+<meta property="og:url" content="https://haiiliin.com/yin2018-j-eng-mech/">
+
+
+  <meta property="og:description" content="Abstract">
+
+
+
+
+
+
+
+  <meta property="article:published_time" content="2022-04-27T00:00:00+00:00">
+
+
+
+
+
+  
+
+  
+
+
+<link rel="canonical" href="https://haiiliin.com/yin2018-j-eng-mech/">
+
+
+
+
+<script type="application/ld+json">
+  {
+    "@context": "https://schema.org",
+    
+      "@type": "Person",
+      "name": "WANG Hailin",
+      "url": "https://haiiliin.com/"
+    
+  }
+</script>
+
+
+
+
+
+
+
+<!-- end _includes/seo.html -->
+
+
+
+  <link href="/feed.xml" type="application/atom+xml" rel="alternate" title="WANG Hailin's blog website Feed">
+
+
+<!-- https://t.co/dKP3o1e -->
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<script>
+  document.documentElement.className = document.documentElement.className.replace(/\bno-js\b/g, '') + ' js ';
+</script>
+
+<!-- For all browsers -->
+<link rel="stylesheet" href="/assets/css/main.css">
+<link rel="preload" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css" as="style" onload="this.onload=null;this.rel='stylesheet'">
+<noscript><link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@5/css/all.min.css"></noscript>
+
+
+
+    <!-- start custom head snippets -->
+
+<!-- insert favicons. use https://realfavicongenerator.net/ -->
+
+<!-- end custom head snippets -->
+
+  </head>
+
+  <body class="layout--single wide">
+    <nav class="skip-links">
+  <ul>
+    <li><a href="#site-nav" class="screen-reader-shortcut">Skip to primary navigation</a></li>
+    <li><a href="#main" class="screen-reader-shortcut">Skip to content</a></li>
+    <li><a href="#footer" class="screen-reader-shortcut">Skip to footer</a></li>
+  </ul>
+</nav>
+
+    <!--[if lt IE 9]>
+<div class="notice--danger align-center" style="margin: 0;">You are using an <strong>outdated</strong> browser. Please <a href="https://browsehappy.com/">upgrade your browser</a> to improve your experience.</div>
+<![endif]-->
+
+    
+
+<div class="masthead">
+  <div class="masthead__inner-wrap">
+    <div class="masthead__menu">
+      <nav id="site-nav" class="greedy-nav">
+        
+        <a class="site-title" href="/">
+          WANG Hailin's blog website
+          
+        </a>
+        <ul class="visible-links"><li class="masthead__menu-item">
+              <a href="/year-archive/">Posts</a>
+            </li><li class="masthead__menu-item">
+              <a href="/categories/">Categories</a>
+            </li><li class="masthead__menu-item">
+              <a href="/tags/">Tags</a>
+            </li><li class="masthead__menu-item">
+              <a href="/collection-archive/">Collections</a>
+            </li><li class="masthead__menu-item">
+              <a href="/refs/">References</a>
+            </li><li class="masthead__menu-item">
+              <a href="/search/">Search</a>
+            </li><li class="masthead__menu-item">
+              <a href="https://github.com/haiiliin">GitHub</a>
+            </li></ul>
+        
+        <button class="greedy-nav__toggle hidden" type="button">
+          <span class="visually-hidden">Toggle menu</span>
+          <div class="navicon"></div>
+        </button>
+        <ul class="hidden-links hidden"></ul>
+      </nav>
+    </div>
+  </div>
+</div>
+
+
+    <div class="initial-content">
+      
+
+
+
+<div id="main" role="main">
+  
+  <div class="sidebar sticky">
+  
+
+
+<div itemscope itemtype="https://schema.org/Person">
+
+  
+    <div class="author__avatar">
+      
+        <img src="/assets/site/profile.png" alt="WANG Hailin" itemprop="image">
+      
+    </div>
+  
+
+  <div class="author__content">
+    
+      <h3 class="author__name" itemprop="name">WANG Hailin</h3>
+    
+    
+      <div class="author__bio" itemprop="description">
+        <p>I am a Ph.D. Student at the Department of Civil and Encironmental Engineering, The Hong Kong Polytechnic University and Department of Geotechnical Engineering, Tongji University.</p>
+
+      </div>
+    
+  </div>
+
+  <div class="author__urls-wrapper">
+    <button class="btn btn--inverse">Follow</button>
+    <ul class="author__urls social-icons">
+      
+        <li itemprop="homeLocation" itemscope itemtype="https://schema.org/Place">
+          <i class="fas fa-fw fa-map-marker-alt" aria-hidden="true"></i> <span itemprop="name">Hong Kong, China</span>
+        </li>
+      
+
+      
+        
+          
+        
+          
+            <li><a href="https://haiiliin.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i><span class="label">Website</span></a></li>
+          
+        
+          
+            <li><a href="https://twitter.com/haiiliin" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i><span class="label">Twitter</span></a></li>
+          
+        
+          
+        
+          
+            <li><a href="https://github.com/haiiliin" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i><span class="label">GitHub</span></a></li>
+          
+        
+          
+        
+      
+
+      
+
+      
+        <li>
+          <a href="mailto:hailin.wang@connect.polyu.hk">
+            <meta itemprop="email" content="hailin.wang@connect.polyu.hk" />
+            <i class="fas fa-fw fa-envelope-square" aria-hidden="true"></i><span class="label">Email</span>
+          </a>
+        </li>
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      
+
+      <!--
+  <li>
+    <a href="http://link-to-whatever-social-network.com/user/" itemprop="sameAs" rel="nofollow noopener noreferrer">
+      <i class="fas fa-fw" aria-hidden="true"></i> Custom Social Profile Link
+    </a>
+  </li>
+-->
+    </ul>
+  </div>
+</div>
+
+  
+  </div>
+
+
+
+  <article class="page h-entry" itemscope itemtype="https://schema.org/CreativeWork">
+    <meta itemprop="headline" content="Modeling Monotonic and Cyclic Behavior of Granular Materials by Exponential Constitutive Function">
+    <meta itemprop="description" content="Abstract">
+    <meta itemprop="datePublished" content="2022-04-27T00:00:00+00:00">
+    
+
+    <div class="page__inner-wrap">
+      
+        <header>
+          <h1 id="page-title" class="page__title p-name" itemprop="headline">
+            <a href="https://haiiliin.com/yin2018-j-eng-mech/" class="u-url" itemprop="url">Modeling Monotonic and Cyclic Behavior of Granular Materials by Exponential Constitutive Function
+</a>
+          </h1>
+          
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2022-04-27T00:00:00+00:00">April 27, 2022</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-clock" aria-hidden="true"></i>
+        
+          1 minute read
+        
+      </span>
+    
+  </p>
+
+
+        </header>
+      
+
+      <section class="page__content e-content" itemprop="text">
+        
+          <aside class="sidebar__right sticky">
+            <nav class="toc">
+              <header><h4 class="nav__title"><i class="fas fa-file-alt"></i> Table of Contents</h4></header>
+              <ul class="toc__menu"><li><a href="#abstract">Abstract</a></li><li><a href="#links">Links</a></li><li><a href="#references">References</a></li></ul>
+
+            </nav>
+          </aside>
+        
+        <h1 id="abstract">Abstract</h1>
+
+<p>It is still an open problem to develop a model with a uniform theoretical treatment under various loading conditions. This paper aims to formulate such a model for describing both monotonic and cyclic behaviors of granular materials. An exponential function was adopted to reproduce the stress-strain relation. Within the framework of endochronic models, the shear strain component was enriched with an absolute term to account for a reverse loading effect during shearing. The capacity of the basic model with four parameters for reproducing the basic features of granular materials was examined. Three numerical schemes for simulating undrained triaxial tests, drained triaxial tests under constant p′ or under constant confining stress, and under both monotonic and cyclic loadings were established. Then, three modifications were carried out to enhance the model by introducing a nonlinear elasticity, a nonlinear stress dilatancy, and the critical state concept with four additional parameters. The enhanced version of the model showed good performances in simulating triaxial tests on Toyoura sand under various loading conditions: drained, undrained, constant p′, constant confining stress, and monotonic and cyclic loadings.</p>
+
+<h1 id="links">Links</h1>
+
+<p>[<a href="https://doi.org/10.1061/(ASCE)EM.1943-7889.0001437">Publisher</a>], [<a href="https://scholar.google.com/scholar?hl=en&amp;as_sdt=0%2C5&amp;q=Modeling+Monotonic+and+Cyclic+Behavior+of+Granular+Materials+by+Exponential+Constitutive+Function&amp;btnG=">Google Scholar</a>], <a class="citation" href="#Yin2018JEngMech">(Yin et al., 2018)</a>.</p>
+
+<style> .pdf-embed-wrap-42d10e95-144f-4be6-9150-cacc0a90cd62 { display:flex; flex-direction: column; width: 100%; height: 1000px; } .pdf-embed-container-42d10e95-144f-4be6-9150-cacc0a90cd62 { height: 100%; } .pdf-embed-container-42d10e95-144f-4be6-9150-cacc0a90cd62 iframe { width: 100%; height: 100%; } </style>
+<div class="pdf-embed-wrap-42d10e95-144f-4be6-9150-cacc0a90cd62"> <div class="pdf-embed-container-42d10e95-144f-4be6-9150-cacc0a90cd62"> <iframe src="/assets/bibliographies/Yin2018-Modeling-Monotonic-and-Cyclic-Behavior-of-Granular-Materials-by-Exponential-Constitutive-Function.pdf" frameborder="0" allowfullscreen=""></iframe> </div> </div>
+
+<h1 id="references">References</h1>
+
+<ol class="bibliography"><li><div class="text-justify">
+    <span id="Yin2018JEngMech">Yin, Z.-Y., Wu, Z.-X., &amp; Hicher, P.-Y. (2018). Modeling monotonic and cyclic behavior of granular materials by exponential constitutive function. <i>Journal of Engineering Mechanics</i>, <i>144</i>(4), 04018014. https://doi.org/10.1061/(ASCE)EM.1943-7889.0001437</span>
+</div>
+
+
+
+<div>
+    
+    <span><a href="http://doi.org/10.1061/(ASCE)EM.1943-7889.0001437">doi: 10.1061/(ASCE)EM.1943-7889.0001437</a></span>
+    
+    
+</div>
+<div>
+    
+    <span><a href="https://ascelibrary.org/doi/epdf/10.1061/(ASCE)EM.1943-7889.0001437">pdf: https://ascelibrary.org/doi/epdf/10.1061/(ASCE)EM.1943-7889.0001437</a></span>
+    
+</div>
+
+<div><pre>@article{Yin2018JEngMech,
+  title = {Modeling monotonic and cyclic behavior of granular materials by exponential constitutive function},
+  author = {Yin, Zhen-Yu and Wu, Ze-Xiang and Hicher, Pierre-Yves},
+  journal = {Journal of Engineering Mechanics},
+  volume = {144},
+  number = {4},
+  pages = {04018014},
+  year = {2018},
+  publisher = {American Society of Civil Engineers},
+  doi = {10.1061/(ASCE)EM.1943-7889.0001437},
+  pdf = {https://ascelibrary.org/doi/epdf/10.1061/(ASCE)EM.1943-7889.0001437}
+}
+</pre></div></li></ol>
+
+        
+      </section>
+
+      <footer class="page__meta">
+        
+        
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-tags" aria-hidden="true"></i> Tags: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/tags/#critical-state" class="page__taxonomy-item" rel="tag">Critical State</a><span class="sep">, </span>
+    
+      <a href="/tags/#cyclic-loading" class="page__taxonomy-item" rel="tag">Cyclic Loading</a><span class="sep">, </span>
+    
+      <a href="/tags/#exponential" class="page__taxonomy-item" rel="tag">Exponential</a><span class="sep">, </span>
+    
+      <a href="/tags/#particle-breakage" class="page__taxonomy-item" rel="tag">Particle Breakage</a><span class="sep">, </span>
+    
+      <a href="/tags/#toyoura-sand" class="page__taxonomy-item" rel="tag">Toyoura Sand</a>
+    
+    </span>
+  </p>
+
+
+
+
+  
+
+
+  
+
+  <p class="page__taxonomy">
+    <strong><i class="fas fa-fw fa-folder-open" aria-hidden="true"></i> Categories: </strong>
+    <span itemprop="keywords">
+    
+      <a href="/categories/#article" class="page__taxonomy-item" rel="tag">Article</a><span class="sep">, </span>
+    
+      <a href="/categories/#constitutive-model" class="page__taxonomy-item" rel="tag">Constitutive Model</a><span class="sep">, </span>
+    
+      <a href="/categories/#elastoplastic-model" class="page__taxonomy-item" rel="tag">Elastoplastic Model</a><span class="sep">, </span>
+    
+      <a href="/categories/#optimization" class="page__taxonomy-item" rel="tag">Optimization</a><span class="sep">, </span>
+    
+      <a href="/categories/#simulation" class="page__taxonomy-item" rel="tag">Simulation</a>
+    
+    </span>
+  </p>
+
+
+        
+
+  <p class="page__date"><strong><i class="fas fa-fw fa-calendar-alt" aria-hidden="true"></i> Updated:</strong> <time datetime="2022-04-27T00:00:00+00:00">April 27, 2022</time></p>
+
+
+      </footer>
+
+      <section class="page__share">
+  
+    <h4 class="page__share-title">Share on</h4>
+  
+
+  <a href="https://twitter.com/intent/tweet?text=Modeling+Monotonic+and+Cyclic+Behavior+of+Granular+Materials+by+Exponential+Constitutive+Function%20https%3A%2F%2Fhaiiliin.com%2Fyin2018-j-eng-mech%2F" class="btn btn--twitter" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Twitter"><i class="fab fa-fw fa-twitter" aria-hidden="true"></i><span> Twitter</span></a>
+
+  <a href="https://www.facebook.com/sharer/sharer.php?u=https%3A%2F%2Fhaiiliin.com%2Fyin2018-j-eng-mech%2F" class="btn btn--facebook" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on Facebook"><i class="fab fa-fw fa-facebook" aria-hidden="true"></i><span> Facebook</span></a>
+
+  <a href="https://www.linkedin.com/shareArticle?mini=true&url=https%3A%2F%2Fhaiiliin.com%2Fyin2018-j-eng-mech%2F" class="btn btn--linkedin" onclick="window.open(this.href, 'window', 'left=20,top=20,width=500,height=500,toolbar=1,resizable=0'); return false;" title="Share on LinkedIn"><i class="fab fa-fw fa-linkedin" aria-hidden="true"></i><span> LinkedIn</span></a>
+</section>
+
+
+      
+  <nav class="pagination">
+    
+      <a href="/yang2021-nag/" class="pagination--pager" title="Soil-structure interface modeling with the nonlinear incremental approach
+">Previous</a>
+    
+    
+      <a href="/taiebat2008-nag/" class="pagination--pager" title="SANISAND: Simple anisotropic sand plasticity model
+">Next</a>
+    
+  </nav>
+
+    </div>
+
+    
+  </article>
+
+  
+  
+    <div class="page__related">
+      <h2 class="page__related-title">You may also enjoy</h2>
+      <div class="grid__wrapper">
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/shahrour1997-cg/" rel="permalink">An elastoplastic constitutive relation for the soil-structure interface under cyclic loading
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2022-05-05T00:00:00+00:00">May 5, 2022</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          less than 1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Abstract
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/taiebat2008-nag/" rel="permalink">SANISAND: Simple anisotropic sand plasticity model
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2022-04-29T00:00:00+00:00">April 29, 2022</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Abstract
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/yang2021-nag/" rel="permalink">Soil-structure interface modeling with the nonlinear incremental approach
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2022-04-27T00:00:00+00:00">April 27, 2022</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          1 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">Abstract
+</p>
+  </article>
+</div>
+
+        
+          
+
+
+
+<div class="grid__item">
+  <article class="archive__item" itemscope itemtype="https://schema.org/CreativeWork">
+    
+    <h2 class="archive__item-title no_toc" itemprop="headline">
+      
+        <a href="/abaqus-python/" rel="permalink">Intelligent Python Scripting in Abaqus
+</a>
+      
+    </h2>
+    
+
+  <p class="page__meta">
+    
+      
+      <span class="page__meta-date">
+        <i class="far fa-fw fa-calendar-alt" aria-hidden="true"></i>
+        
+        <time datetime="2022-04-26T00:00:00+00:00">April 26, 2022</time>
+      </span>
+    
+
+    <span class="page__meta-sep"></span>
+
+    
+      
+      
+
+      <span class="page__meta-readtime">
+        <i class="far fa-fw fa-clock" aria-hidden="true"></i>
+        
+          5 minute read
+        
+      </span>
+    
+  </p>
+
+
+    <p class="archive__item-excerpt" itemprop="description">pyabaqus package
+
+pyabaqus is a Python package providing type hints for Python scripting of Abaqus, you can use it to write your Python script of Abaqus flue...</p>
+  </article>
+</div>
+
+        
+      </div>
+    </div>
+  
+  
+</div>
+    </div>
+
+    
+
+    <div id="footer" class="page__footer">
+      <footer>
+        <!-- start custom footer snippets -->
+
+<!-- end custom footer snippets -->
+        <div class="page__footer-follow">
+  <ul class="social-icons">
+    
+      <li><strong>Follow:</strong></li>
+    
+
+    
+      
+        
+      
+        
+          <li><a href="https://haiiliin.com" rel="nofollow noopener noreferrer"><i class="fas fa-fw fa-link" aria-hidden="true"></i> Website</a></li>
+        
+      
+        
+          <li><a href="https://twitter.com/haiiliin" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-twitter-square" aria-hidden="true"></i> Twitter</a></li>
+        
+      
+        
+      
+        
+          <li><a href="https://github.com/haiiliin" rel="nofollow noopener noreferrer"><i class="fab fa-fw fa-github" aria-hidden="true"></i> GitHub</a></li>
+        
+      
+        
+      
+    
+
+    
+      <li><a href="/feed.xml"><i class="fas fa-fw fa-rss-square" aria-hidden="true"></i> Feed</a></li>
+    
+  </ul>
+</div>
+
+<div class="page__footer-copyright">&copy; 2022 WANG Hailin. Powered by <a href="https://jekyllrb.com" rel="nofollow">Jekyll</a> &amp; <a href="https://mademistakes.com/work/minimal-mistakes-jekyll-theme/" rel="nofollow">Minimal Mistakes</a>.</div>
+
+      </footer>
+    </div>
+
+    
+  <script src="/assets/js/main.min.js"></script>
+
+
+
+
+
+
+
+
+
+
+  </body>
+</html>

@@ -1,0 +1,277 @@
+<?xml version="1.0" encoding="utf-8"?><feed xmlns="http://www.w3.org/2005/Atom" ><generator uri="https://jekyllrb.com/" version="4.2.2">Jekyll</generator><link href="https://haiiliin.com/feed.xml" rel="self" type="application/atom+xml" /><link href="https://haiiliin.com/" rel="alternate" type="text/html" /><updated>2022-05-05T04:49:07+00:00</updated><id>https://haiiliin.com/feed.xml</id><title type="html">WANG Hailin’s blog website</title><subtitle>WANG Hailin's blog website</subtitle><author><name>WANG Hailin</name><email>hailin.wang@connect.polyu.hk</email></author><entry><title type="html">An elastoplastic constitutive relation for the soil-structure interface under cyclic loading</title><link href="https://haiiliin.com/shahrour1997-cg/" rel="alternate" type="text/html" title="An elastoplastic constitutive relation for the soil-structure interface under cyclic loading" /><published>2022-05-05T00:00:00+00:00</published><updated>2022-05-05T00:00:00+00:00</updated><id>https://haiiliin.com/shahrour1997-cg</id><content type="html" xml:base="https://haiiliin.com/shahrour1997-cg/"><![CDATA[<h1 id="abstract">Abstract</h1>
+
+<p>This paper includes a presentation of cyclic interface tests performed with smooth and rough surfaces on loose and dense silica sand under either a constant value of the normal stress or a zero normal displacement. These tests are then used for the elaboration of an elastoplastic constitutive relation based on the bounding surface with two families of surfaces. The constitutive relation is checked over cyclic tests performed with rough interface on both loose and dense sands.</p>
+
+<h1 id="links">Links</h1>
+
+<p>[<a href="https://doi.org/10.1016/S0266-352X(97)00001-3">Publisher</a>], [<a href="https://scholar.google.com/scholar?hl=en&amp;as_sdt=0%2C5&amp;q=An+elastoplastic+constitutive+relation+for+the+soil-structure+interface+under+cyclic+loading&amp;btnG=">Google Scholar</a>], <a class="citation" href="#Shahrour1997CG">(Shahrour &amp; Rezaie, 1997)</a>.</p>
+
+<style> .pdf-embed-wrap-77aba3e2-34ba-4709-8a8a-697cb9f20821 { display:flex; flex-direction: column; width: 100%; height: 1000px; } .pdf-embed-container-77aba3e2-34ba-4709-8a8a-697cb9f20821 { height: 100%; } .pdf-embed-container-77aba3e2-34ba-4709-8a8a-697cb9f20821 iframe { width: 100%; height: 100%; } </style>
+<div class="pdf-embed-wrap-77aba3e2-34ba-4709-8a8a-697cb9f20821"> <div class="pdf-embed-container-77aba3e2-34ba-4709-8a8a-697cb9f20821"> <iframe src="/assets/bibliographies/Shahrour1997-An-elastoplastic-constitutive-relation-for-the-soil-structure-interface-under-cyclic-loading.pdf" frameborder="0" allowfullscreen=""></iframe> </div> </div>
+
+<h1 id="references">References</h1>
+
+<ol class="bibliography"><li><div class="text-justify">
+    <span id="Shahrour1997CG">Shahrour, I., &amp; Rezaie, F. (1997). An elastoplastic constitutive relation for the soil-structure interface under cyclic loading. <i>Computers and Geotechnics</i>, <i>21</i>(1), 21–39. https://doi.org/10.1016/S0266-352X(97)00001-3</span>
+</div>
+
+
+
+<div>
+    
+    <span><a href="http://doi.org/10.1016/S0266-352X(97)00001-3">doi: 10.1016/S0266-352X(97)00001-3</a></span>
+    
+    
+</div>
+<div>
+    
+</div>
+
+<div><pre>@article{Shahrour1997CG,
+  title = {An elastoplastic constitutive relation for the soil-structure interface under cyclic loading},
+  author = {Shahrour, I and Rezaie, F},
+  journal = {Computers and Geotechnics},
+  volume = {21},
+  number = {1},
+  pages = {21--39},
+  year = {1997},
+  publisher = {Elsevier},
+  doi = {10.1016/S0266-352X(97)00001-3}
+}
+</pre></div></li></ol>]]></content><author><name>WANG Hailin</name><email>hailin.wang@connect.polyu.hk</email></author><category term="Article" /><category term="Simulation" /><category term="Constitutive Model" /><category term="Elastoplastic Model" /><category term="Critical State" /><category term="Bounding Surface" /><category term="Cyclic Loading" /><summary type="html"><![CDATA[Abstract]]></summary></entry><entry><title type="html">SANISAND: Simple anisotropic sand plasticity model</title><link href="https://haiiliin.com/taiebat2008-nag/" rel="alternate" type="text/html" title="SANISAND: Simple anisotropic sand plasticity model" /><published>2022-04-29T00:00:00+00:00</published><updated>2022-04-29T00:00:00+00:00</updated><id>https://haiiliin.com/taiebat2008-nag</id><content type="html" xml:base="https://haiiliin.com/taiebat2008-nag/"><![CDATA[<h1 id="abstract">Abstract</h1>
+
+<p>SANISAND is the name used for a family of simple anisotropic sand constitutive models developed over the past few years within the framework of critical state soil mechanics and bounding surface plasticity. The existing SANISAND models use a narrow open cone-type yield surface with apex at the origin obeying rotational hardening, which implies that only changes of the stress ratio can cause plastic deformations, while constant stress-ratio loading induces only elastic response. In order to circumvent this limitation, the present member of the SANISAND family introduces a modified eight-curve equation as the analytical description of a narrow but closed cone-type yield surface that obeys rotational and isotropic hardening. This modification enables the prediction of plastic strains during any type of constant stress-ratio loading, a feature lacking from the previous SANISAND models, without losing their well-established predictive capability for all other loading conditions including the cyclic. In the process the plausible assumption is made that the plastic strain rate decomposes in two parts, one due to the change of stress ratio and a second due to loading under constant stress ratio, with isotropic hardening depending on the volumetric component of the latter part only. The model formulation is presented firstly in the triaxial stress space and subsequently its multiaxial generalization is developed following systematically the steps of the triaxial one. A detailed calibration procedure for the model constants is presented, while successful simulation of both drained and undrained behavior of sands under constant and variable stress-ratio loadings at various densities and confining pressures is obtained by the model.</p>
+
+<h1 id="links">Links</h1>
+
+<p>[<a href="https://doi.org/10.1002/nag.651">Publisher</a>], [<a href="https://scholar.google.com/scholar?hl=en&amp;as_sdt=0%2C5&amp;q=SANISAND%3A+Simple+anisotropic+sand+plasticity+model&amp;btnG=">Google Scholar</a>], <a class="citation" href="#Taiebat2008Nag">(Taiebat &amp; Dafalias, 2008)</a>.</p>
+
+<style> .pdf-embed-wrap-aaf2ba84-6539-4a6b-89b6-45f4125b347f { display:flex; flex-direction: column; width: 100%; height: 1000px; } .pdf-embed-container-aaf2ba84-6539-4a6b-89b6-45f4125b347f { height: 100%; } .pdf-embed-container-aaf2ba84-6539-4a6b-89b6-45f4125b347f iframe { width: 100%; height: 100%; } </style>
+<div class="pdf-embed-wrap-aaf2ba84-6539-4a6b-89b6-45f4125b347f"> <div class="pdf-embed-container-aaf2ba84-6539-4a6b-89b6-45f4125b347f"> <iframe src="/assets/bibliographies/Taiebat2008-SANISAND-Simple-anisotropic-sand-plasticity-model.pdf" frameborder="0" allowfullscreen=""></iframe> </div> </div>
+
+<h1 id="references">References</h1>
+
+<ol class="bibliography"><li><div class="text-justify">
+    <span id="Taiebat2008Nag">Taiebat, M., &amp; Dafalias, Y. F. (2008). SANISAND: Simple anisotropic sand plasticity model. <i>International Journal for Numerical and Analytical Methods in Geomechanics</i>, <i>32</i>(8), 915–948. https://doi.org/10.1002/nag.651</span>
+</div>
+
+
+
+<div>
+    
+    <span><a href="http://doi.org/10.1002/nag.651">doi: 10.1002/nag.651</a></span>
+    
+    
+</div>
+<div>
+    
+    <span><a href="https://onlinelibrary.wiley.com/doi/epdf/10.1002/nag.651">pdf: https://onlinelibrary.wiley.com/doi/epdf/10.1002/nag.651</a></span>
+    
+</div>
+
+<div><pre>@article{Taiebat2008Nag,
+  title = {SANISAND: Simple anisotropic sand plasticity model},
+  author = {Taiebat, Mahdi and Dafalias, Yannis F},
+  journal = {International Journal for Numerical and Analytical Methods in Geomechanics},
+  volume = {32},
+  number = {8},
+  pages = {915--948},
+  year = {2008},
+  publisher = {Wiley Online Library},
+  doi = {10.1002/nag.651},
+  pdf = {https://onlinelibrary.wiley.com/doi/epdf/10.1002/nag.651}
+}
+</pre></div></li></ol>]]></content><author><name>WANG Hailin</name><email>hailin.wang@connect.polyu.hk</email></author><category term="Article" /><category term="Simulation" /><category term="Constitutive Model" /><category term="Elastoplastic Model" /><category term="SANISAND" /><category term="Critical State" /><category term="Bounding Surface" /><category term="Toyoura Sand" /><summary type="html"><![CDATA[Abstract]]></summary></entry><entry><title type="html">Soil-structure interface modeling with the nonlinear incremental approach</title><link href="https://haiiliin.com/yang2021-nag/" rel="alternate" type="text/html" title="Soil-structure interface modeling with the nonlinear incremental approach" /><published>2022-04-27T00:00:00+00:00</published><updated>2022-04-27T00:00:00+00:00</updated><id>https://haiiliin.com/yang2021-nag</id><content type="html" xml:base="https://haiiliin.com/yang2021-nag/"><![CDATA[<h1 id="abstract">Abstract</h1>
+
+<p>This paper aims to develop the nonlinear incremental modeling approach for describing both monotonic and cyclic behaviors of the soil-structure interface. An exponential function is adopted as an example to reproduce the asymptotic relationship between the interface shear stress ratio and the shear displacement. A stress-dilatancy relation is developed for the shear-induced change of interface thickness. A shear stress reversal technique is incorporated for cyclic loading effect. Then, three numerical schemes for simulating constant thickness, constant normal load, and constant normal stiffness tests are established respectively. Next, three modifications are made to enhance the model by introducing a nonlinear shear modulus, the critical state concept, and the grain breakage effect. The enhanced model is evaluated with satisfactory performance in simulating interface tests under various loading conditions. Furthermore, the extensions to other nonlinear incremental interface model and clay-structure interface modeling with rate effect relating to drainage conditions are successfully demonstrated and discussed.</p>
+
+<h1 id="links">Links</h1>
+
+<p>[<a href="https://doi.org/10.1002/nag.3206">Publisher</a>], [<a href="https://scholar.google.com/scholar?hl=en&amp;as_sdt=0%2C5&amp;q=Soil‐structure+interface+modeling+with+the+nonlinear+incremental+approach&amp;btnG=">Google Scholar</a>], <a class="citation" href="#Yang2021NAG">(Yang &amp; Yin, 2021)</a>.</p>
+
+<style> .pdf-embed-wrap-ecce36c4-895d-4026-8158-7c82ecb59653 { display:flex; flex-direction: column; width: 100%; height: 1000px; } .pdf-embed-container-ecce36c4-895d-4026-8158-7c82ecb59653 { height: 100%; } .pdf-embed-container-ecce36c4-895d-4026-8158-7c82ecb59653 iframe { width: 100%; height: 100%; } </style>
+<div class="pdf-embed-wrap-ecce36c4-895d-4026-8158-7c82ecb59653"> <div class="pdf-embed-container-ecce36c4-895d-4026-8158-7c82ecb59653"> <iframe src="/assets/bibliographies/Yang2021-Soil-structure-interface-modeling-with-the-nonlinear-incremental-approach.pdf" frameborder="0" allowfullscreen=""></iframe> </div> </div>
+
+<h1 id="references">References</h1>
+
+<ol class="bibliography"><li><div class="text-justify">
+    <span id="Yang2021NAG">Yang, J., &amp; Yin, Z.-Y. (2021). Soil-structure interface modeling with the nonlinear incremental approach. <i>International Journal for Numerical and Analytical Methods in Geomechanics</i>, <i>45</i>(10), 1381–1404. https://doi.org/10.1002/nag.3206</span>
+</div>
+
+
+
+<div>
+    
+    <span><a href="http://doi.org/10.1002/nag.3206">doi: 10.1002/nag.3206</a></span>
+    
+    
+</div>
+<div>
+    
+    <span><a href="https://onlinelibrary.wiley.com/doi/epdf/10.1002/nag.3206">pdf: https://onlinelibrary.wiley.com/doi/epdf/10.1002/nag.3206</a></span>
+    
+</div>
+
+<div><pre>@article{Yang2021NAG,
+  author = {Yang, Jie and Yin, Zhen-Yu},
+  year = {2021},
+  title = {Soil-structure interface modeling with the nonlinear incremental approach},
+  journal = {International Journal for Numerical and Analytical Methods in Geomechanics},
+  volume = {45},
+  number = {10},
+  pages = {1381-1404},
+  doi = {10.1002/nag.3206},
+  pdf = {https://onlinelibrary.wiley.com/doi/epdf/10.1002/nag.3206}
+}
+</pre></div></li></ol>]]></content><author><name>WANG Hailin</name><email>hailin.wang@connect.polyu.hk</email></author><category term="Article" /><category term="Simulation" /><category term="Constitutive Model" /><category term="Nonlinear Elastic Model" /><category term="SSI" /><category term="Optimization" /><category term="Exponential" /><category term="Critical State" /><category term="Particle Breakage" /><category term="Grain Size Distribution" /><category term="Cyclic Loading" /><category term="Fontainbleau Sand" /><category term="Hostun Sand" /><summary type="html"><![CDATA[Abstract]]></summary></entry><entry><title type="html">Modeling Monotonic and Cyclic Behavior of Granular Materials by Exponential Constitutive Function</title><link href="https://haiiliin.com/yin2018-j-eng-mech/" rel="alternate" type="text/html" title="Modeling Monotonic and Cyclic Behavior of Granular Materials by Exponential Constitutive Function" /><published>2022-04-27T00:00:00+00:00</published><updated>2022-04-27T00:00:00+00:00</updated><id>https://haiiliin.com/yin2018-j-eng-mech</id><content type="html" xml:base="https://haiiliin.com/yin2018-j-eng-mech/"><![CDATA[<h1 id="abstract">Abstract</h1>
+
+<p>It is still an open problem to develop a model with a uniform theoretical treatment under various loading conditions. This paper aims to formulate such a model for describing both monotonic and cyclic behaviors of granular materials. An exponential function was adopted to reproduce the stress-strain relation. Within the framework of endochronic models, the shear strain component was enriched with an absolute term to account for a reverse loading effect during shearing. The capacity of the basic model with four parameters for reproducing the basic features of granular materials was examined. Three numerical schemes for simulating undrained triaxial tests, drained triaxial tests under constant p′ or under constant confining stress, and under both monotonic and cyclic loadings were established. Then, three modifications were carried out to enhance the model by introducing a nonlinear elasticity, a nonlinear stress dilatancy, and the critical state concept with four additional parameters. The enhanced version of the model showed good performances in simulating triaxial tests on Toyoura sand under various loading conditions: drained, undrained, constant p′, constant confining stress, and monotonic and cyclic loadings.</p>
+
+<h1 id="links">Links</h1>
+
+<p>[<a href="https://doi.org/10.1061/(ASCE)EM.1943-7889.0001437">Publisher</a>], [<a href="https://scholar.google.com/scholar?hl=en&amp;as_sdt=0%2C5&amp;q=Modeling+Monotonic+and+Cyclic+Behavior+of+Granular+Materials+by+Exponential+Constitutive+Function&amp;btnG=">Google Scholar</a>], <a class="citation" href="#Yin2018JEngMech">(Yin et al., 2018)</a>.</p>
+
+<style> .pdf-embed-wrap-42d10e95-144f-4be6-9150-cacc0a90cd62 { display:flex; flex-direction: column; width: 100%; height: 1000px; } .pdf-embed-container-42d10e95-144f-4be6-9150-cacc0a90cd62 { height: 100%; } .pdf-embed-container-42d10e95-144f-4be6-9150-cacc0a90cd62 iframe { width: 100%; height: 100%; } </style>
+<div class="pdf-embed-wrap-42d10e95-144f-4be6-9150-cacc0a90cd62"> <div class="pdf-embed-container-42d10e95-144f-4be6-9150-cacc0a90cd62"> <iframe src="/assets/bibliographies/Yin2018-Modeling-Monotonic-and-Cyclic-Behavior-of-Granular-Materials-by-Exponential-Constitutive-Function.pdf" frameborder="0" allowfullscreen=""></iframe> </div> </div>
+
+<h1 id="references">References</h1>
+
+<ol class="bibliography"><li><div class="text-justify">
+    <span id="Yin2018JEngMech">Yin, Z.-Y., Wu, Z.-X., &amp; Hicher, P.-Y. (2018). Modeling monotonic and cyclic behavior of granular materials by exponential constitutive function. <i>Journal of Engineering Mechanics</i>, <i>144</i>(4), 04018014. https://doi.org/10.1061/(ASCE)EM.1943-7889.0001437</span>
+</div>
+
+
+
+<div>
+    
+    <span><a href="http://doi.org/10.1061/(ASCE)EM.1943-7889.0001437">doi: 10.1061/(ASCE)EM.1943-7889.0001437</a></span>
+    
+    
+</div>
+<div>
+    
+    <span><a href="https://ascelibrary.org/doi/epdf/10.1061/(ASCE)EM.1943-7889.0001437">pdf: https://ascelibrary.org/doi/epdf/10.1061/(ASCE)EM.1943-7889.0001437</a></span>
+    
+</div>
+
+<div><pre>@article{Yin2018JEngMech,
+  title = {Modeling monotonic and cyclic behavior of granular materials by exponential constitutive function},
+  author = {Yin, Zhen-Yu and Wu, Ze-Xiang and Hicher, Pierre-Yves},
+  journal = {Journal of Engineering Mechanics},
+  volume = {144},
+  number = {4},
+  pages = {04018014},
+  year = {2018},
+  publisher = {American Society of Civil Engineers},
+  doi = {10.1061/(ASCE)EM.1943-7889.0001437},
+  pdf = {https://ascelibrary.org/doi/epdf/10.1061/(ASCE)EM.1943-7889.0001437}
+}
+</pre></div></li></ol>]]></content><author><name>WANG Hailin</name><email>hailin.wang@connect.polyu.hk</email></author><category term="Article" /><category term="Simulation" /><category term="Constitutive Model" /><category term="Elastoplastic Model" /><category term="Optimization" /><category term="Exponential" /><category term="Critical State" /><category term="Particle Breakage" /><category term="Cyclic Loading" /><category term="Toyoura Sand" /><summary type="html"><![CDATA[Abstract]]></summary></entry><entry><title type="html">Intelligent Python Scripting in Abaqus</title><link href="https://haiiliin.com/abaqus-python/" rel="alternate" type="text/html" title="Intelligent Python Scripting in Abaqus" /><published>2022-04-26T00:00:00+00:00</published><updated>2022-04-26T00:00:00+00:00</updated><id>https://haiiliin.com/pyabaqus</id><content type="html" xml:base="https://haiiliin.com/abaqus-python/"><![CDATA[<h1 id="pyabaqus-package">pyabaqus package</h1>
+
+<p><code class="language-plaintext highlighter-rouge">pyabaqus</code> is a Python package providing type hints for Python scripting of Abaqus, you can use it to write your Python script of Abaqus fluently, even without doing anything in Abaqus/CAE.</p>
+
+<!--more-->
+
+<ul>
+  <li>GitHub repository: <a href="https://github.com/Haiiliin/pyabaqus">github.com/Haiiliin/pyabaqus</a></li>
+  <li>PyPI: <a href="https://pypi.org/project/pyabaqus/">pyabaqus · PyPI</a></li>
+  <li>Documentation: <a href="https://haiiliin.com/pyabaqus/">pyabaqus documentation</a></li>
+</ul>
+
+<h2 id="screenshots">Screenshots</h2>
+
+<ul>
+  <li>Build an Abaqus model
+<img src="/assets/pyabaqus/Model.gif" alt="Build an Abaqus model" /></li>
+  <li>Extract the output data
+<img src="/assets/pyabaqus/Output.gif" alt="Build an Abaqus model" /></li>
+</ul>
+
+<h1 id="current-situation">Current situation</h1>
+
+<p><a href="https://www.3ds.com/products-services/simulia/products/abaqus/">Abaqus</a> is a great program for finite element analysis, it is so powerful that has been widely used in the field of civil engineering.</p>
+
+<p>Abaqus use Python to access the functionality of Abaqus/CAE. When we use the Abaqus/CAE graphical user interface (GUI) to create a model and to visualize the results, commands are issued internally by Abaqus/CAE after every operation. Alternately, we can use Python scripts to build our Abaqus models, even if it is inconvenient in most conditions. However, in some specific conditions, it is much better to use Python scripts to access the Abaqus/CAE, for example,</p>
+
+<ul>
+  <li>When we want to build a model with a great number of similar features like boundary conditions or interactions, it is not possible to add them manually; or</li>
+  <li>When we are testing the model, we modified some part of the model to see how the results change, we want to extract the output data and do some further calculations, it is very inconvenient to copy the output data to external programs to do the further calculations every time we evaluate the model.</li>
+</ul>
+
+<p>In the first condition, we can use the Python script to access the <strong>Abaqus Model Database</strong> to build the Abaqus model, and in the second condition we can use the Python script to access the <strong>Abaqus Output Database</strong> to extract the output data.</p>
+
+<p>The biggest problem to use the Python script to access Abaqus/CAE is that it is very difficult to write the Python script correctly, even if it is well documented in <a href="https://help.3ds.com/2021/English/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-ov.htm?contextscope=all&amp;id=b4f4f89368234098be9512e85e9d90f8">Abaqus Scripting Reference Guide</a>.</p>
+
+<h1 id="usual-solution">Usual solution</h1>
+
+<p>The most used method is to build the Abaqus model in Abaqus/CAE, the corresponding Python scripts will be recorded in the <code class="language-plaintext highlighter-rouge">abaqus.rpy</code> file which is located in the current work directory of the Abaqus model, then we copy the corresponding scripts into our own Python script. However, the generated scripts by Abaqus is not efficient to some extent, and it is hard to maintain, for example, there are many redundant scripts that are related to access the Abaqus objects.</p>
+
+<h1 id="a-better-solution">A better solution</h1>
+
+<p>There is a better solution, which is the purpose of the Python package <a href="https://github.com/Haiiliin/pyabaqus">haiiliin/pyabaqus</a>, the original idea is inspired by <a href="https://github.com/liangzulin/abaqus_pycharm">liangzulin/abaqus_pycharm</a>.</p>
+
+<p><a href="https://www.python.org/">Python</a> is a programming language that lets you work quickly and integrate systems more effectively. Even though Python is a dynamic program language, docstrings and type hints make it easier to write our Python script correctly and efficiently, which provide the documentation of classes, functions, methods, …,  and type hints for the arguments of the functions and methods, respectively. Using IDEs that provides live preview of the docstrings such as <a href="https://code.visualstudio.com/">Visual Studio Code</a> and <a href="https://www.jetbrains.com/pycharm/">PyCharm</a> will make it much easier to write the Python scripts.</p>
+
+<p><img src="/assets/pyabaqus/vscode.png" alt="Python Type Hints in VSCode" /></p>
+
+<p>If the docstrings of the Abaqus/Python functions, methods, and classes are provided, it will be much easier to write maintainable Abaqus/Python scripts. However, it is not possible to access the Abaqus/Python kernel outside the embedded Python environment in Abaqus, we can only access the embedded Python environment in Abaqus/CAE or by the Abaqus shell commands. And second, it is not possible to get the source code of the embedded Python environment in Abaqus since it is compiled into executable files or libraries.</p>
+
+<p>The last way is to write the Abaqus/Python docstrings on our own, <a href="https://github.com/liangzulin">liangzulin</a> have done some work in this area in <a href="https://github.com/liangzulin/abaqus_pycharm">liangzulin/abaqus_pycharm</a>. However, it is just a very small subset of the whole Abaqus/Python environment. It sounds impossible to implement all the functions, methods, and classes of the Abaqus/Python environment.</p>
+
+<p>Based on <a href="https://github.com/liangzulin">liangzulin</a>’s idea, a feasible idea is proposed. The Abaqus/Python API is well documented in <a href="https://help.3ds.com/2021/English/DSSIMULIA_Established/SIMACAEKERRefMap/simaker-c-ov.htm?contextscope=all&amp;id=b4f4f89368234098be9512e85e9d90f8">Abaqus Scripting Reference Guide</a>, based on the online documentation, using the web crawling technique, it is possible to reconstruct the Abaqus/Python environment, <a href="https://github.com/Haiiliin/pyabaqus">pyabaqus</a> was developed then.</p>
+
+<h1 id="how-to-work-with-it">How to work with it?</h1>
+
+<p><code class="language-plaintext highlighter-rouge">pyabaqus</code> is a package that provides type hints for Abaqus/Python scripting, which makes Abaqus/Python scripting much easier. It is usually installed in a Python environment (Python version &gt;= 3.9) outside Abaqus instead of the embedded Python environment in Abaqus.</p>
+
+<p>Since <code class="language-plaintext highlighter-rouge">pyabaqus</code> is written in Python3 and the embedded Python environment in Abaqus is Python2, <strong>you MUST write the Python scripts in a compatible way that it is accepted by Python3 and Python2</strong>.</p>
+
+<h2 id="how-to-execute-the-script">How to execute the script?</h2>
+
+<p>The general way to execute the script is to do it in Abaqus/CAE or using Abaqus shell commands. However, <code class="language-plaintext highlighter-rouge">pyabaqus</code> provides an easier way: <strong>just run your python script in your own Python environment</strong>.</p>
+
+<h2 id="setup-the-abaqus-environment">Setup the Abaqus environment</h2>
+
+<p>In order to use Abaqus command to execute the Python script and submit the job, you need to tell <code class="language-plaintext highlighter-rouge">pyabaqus</code> where the Abaqus command is located. Usually, Abaqus command locates in a directory like this:</p>
+
+<div class="language-plaintext highlighter-rouge"><div class="highlight"><pre class="highlight"><code>C:/SIMULIA/Commands/abaqus.bat
+</code></pre></div></div>
+
+<p>You can add the directory <strong>C:/SIMULIA/Commands</strong> to the system environment variable Path, or you can create a new system variable named <strong>ABAQUS_BAT_PATH</strong>, and set the value to the file path of the Abaqus command, i.e., <strong>C:/SIMULIA/Commands/abaqus.bat</strong>.</p>
+
+<h2 id="notes-on-the-scripts">Notes on the scripts</h2>
+
+<p>In the backend, <code class="language-plaintext highlighter-rouge">pyabaqus</code> call the Abaqus shell commands to submit the script to the Abaqus kernel:</p>
+
+<div class="language-shell highlighter-rouge"><div class="highlight"><pre class="highlight"><code>abaqus cae <span class="nt">-noGUI</span> script.py
+</code></pre></div></div>
+
+<p>More specifically, <code class="language-plaintext highlighter-rouge">pyabaqus</code> rewrites the <code class="language-plaintext highlighter-rouge">mdb.saveAs()</code> method to call the Abaqus shell commands to exec the Python script:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">os</span><span class="p">,</span> <span class="n">sys</span>
+
+<span class="k">def</span> <span class="nf">saveAs</span><span class="p">(</span><span class="n">pathName</span><span class="p">:</span> <span class="nb">str</span><span class="p">):</span>
+    <span class="n">abaqus</span> <span class="o">=</span> <span class="s">'abaqus'</span>
+    <span class="k">if</span> <span class="s">'ABAQUS_BAT_PATH'</span> <span class="ow">in</span> <span class="n">os</span><span class="p">.</span><span class="n">environ</span><span class="p">.</span><span class="n">keys</span><span class="p">():</span>
+        <span class="n">abaqus</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">environ</span><span class="p">[</span><span class="s">'ABAQUS_BAT_PATH'</span><span class="p">]</span>
+    <span class="n">os</span><span class="p">.</span><span class="n">system</span><span class="p">(</span><span class="s">'{} cae -noGUI {}'</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">abaqus</span><span class="p">,</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">sys</span><span class="p">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">])))</span>
+</code></pre></div></div>
+
+<p>And after the script is submitted to Abaqus kernel, <code class="language-plaintext highlighter-rouge">mdb.saveAs()</code> becomes a normal method to save the model because <code class="language-plaintext highlighter-rouge">pyabaqus</code> is not installed in the embedded Python environment in Abaqus. So you have to call <code class="language-plaintext highlighter-rouge">mdb.saveAs()</code> method in your Python script.</p>
+
+<p>In the output script, we might not have to use the <code class="language-plaintext highlighter-rouge">mdb.saveAs()</code> method, then another similar method <code class="language-plaintext highlighter-rouge">session.openOdb()</code> or <code class="language-plaintext highlighter-rouge">odbAccess.openOdb()</code> is also reimplemented:</p>
+
+<div class="language-python highlighter-rouge"><div class="highlight"><pre class="highlight"><code><span class="kn">import</span> <span class="nn">os</span><span class="p">,</span> <span class="n">sys</span>
+
+<span class="k">def</span> <span class="nf">openOdb</span><span class="p">(</span><span class="n">name</span><span class="p">:</span> <span class="nb">str</span><span class="p">,</span> <span class="o">*</span><span class="n">args</span><span class="p">,</span> <span class="o">**</span><span class="n">kwargs</span><span class="p">):</span>
+    <span class="n">abaqus</span> <span class="o">=</span> <span class="s">'abaqus'</span>
+    <span class="k">if</span> <span class="s">'ABAQUS_BAT_PATH'</span> <span class="ow">in</span> <span class="n">os</span><span class="p">.</span><span class="n">environ</span><span class="p">.</span><span class="n">keys</span><span class="p">():</span>
+        <span class="n">abaqus</span> <span class="o">=</span> <span class="n">os</span><span class="p">.</span><span class="n">environ</span><span class="p">[</span><span class="s">'ABAQUS_BAT_PATH'</span><span class="p">]</span>
+    <span class="n">os</span><span class="p">.</span><span class="n">system</span><span class="p">(</span><span class="s">'{} cae database={} script={}'</span><span class="p">.</span><span class="nb">format</span><span class="p">(</span><span class="n">abaqus</span><span class="p">,</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">name</span><span class="p">),</span> <span class="n">os</span><span class="p">.</span><span class="n">path</span><span class="p">.</span><span class="n">abspath</span><span class="p">(</span><span class="n">sys</span><span class="p">.</span><span class="n">argv</span><span class="p">[</span><span class="mi">0</span><span class="p">])))</span>
+</code></pre></div></div>
+
+<p>So you have to call <code class="language-plaintext highlighter-rouge">session.openOdb()</code> or <code class="language-plaintext highlighter-rouge">odbAccess.openOdb()</code> in your output script.</p>
+
+<h1 id="explore-more">Explore more</h1>
+
+<p>For more information about <code class="language-plaintext highlighter-rouge">pyabaqus</code>, please refer to the <a href="https://pyabaqus.haiiliin.com/">documentation</a> or the <a href="https://github.com/Haiiliin/pyabaqus">GitHub repository</a>.</p>]]></content><author><name>WANG Hailin</name><email>hailin.wang@connect.polyu.hk</email></author><category term="Abaqus" /><category term="Python" /><summary type="html"><![CDATA[pyabaqus package pyabaqus is a Python package providing type hints for Python scripting of Abaqus, you can use it to write your Python script of Abaqus fluently, even without doing anything in Abaqus/CAE.]]></summary></entry></feed>
