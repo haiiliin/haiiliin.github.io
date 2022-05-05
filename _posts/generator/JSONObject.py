@@ -10,7 +10,7 @@ class NodeType(IntEnum):
     Number = 1
     IntNumber = 1
     RealNumber = 1
-    Boolean = 2
+    BooleanNumber = 2
     Null = 3
     Dictionary = 4
     Array = 5
@@ -19,7 +19,7 @@ class NodeType(IntEnum):
 class JSONEncoder(json.JSONEncoder):
 
     def default(self, o):
-        if isinstance(o, NoneNode):
+        if isinstance(o, NullNode):
             return None
         else:
             return o
@@ -75,10 +75,10 @@ class BooleanNumberNode(NumberNode, int):
 
     @property
     def type(self):
-        return NodeType.Boolean
+        return NodeType.BooleanNumber
 
 
-class DictionaryNode(NodeBase, dict):
+class DictionaryNode(NodeBase, dict[str, NodeBase]):
 
     def __init__(self, data: dict):
         super().__init__()
@@ -102,7 +102,7 @@ class ArrayNode(NodeBase, list[NodeBase]):
         return NodeType.Array
 
 
-class NoneNode(NodeBase):
+class NullNode(NodeBase):
 
     def __repr__(self):
         return repr(None)
@@ -129,7 +129,7 @@ def parse_node(data: typing.Union[str, int, float, bool, None, dict, list]) -> N
     elif isinstance(data, list):
         return ArrayNode(data)
     elif data is None:
-        return NoneNode()
+        return NullNode()
     else:
         raise ValueError('{} is not JSON serializable')
 
