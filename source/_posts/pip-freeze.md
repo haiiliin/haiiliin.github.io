@@ -1,8 +1,11 @@
 ---
 title: Freezing Installed Python Packages
 date: 2023-03-17
-category: Programming
-tags: Python, Pip
+categories:
+  - Programming
+tags:
+  - Python
+  - Pip
 ---
 # Freezing Installed Python Packages
 

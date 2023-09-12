@@ -1,8 +1,12 @@
 ---
 title: Matplotlib Widget for PyQt
 date: 2023-03-15
-category: Programming
-tags: Python, Qt, Matplotlib
+categories:
+  - Programming
+tags:
+  - Python
+  - Qt
+  - Matplotlib
 ---
 # Matplotlib Widget for PyQt
 

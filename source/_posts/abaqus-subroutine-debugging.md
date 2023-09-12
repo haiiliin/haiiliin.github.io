@@ -1,8 +1,12 @@
 ---
 title: Debug Abaqus Subroutines
 date: 2023-03-14
-category: Finite Element Analysis
-tags: Abaqus, Subroutine, Debugging
+categories:
+  - Finite Element Analysis
+tags:
+  - Abaqus
+  - Subroutine
+  - Debugging
 ---
 # abaqus-subroutine-debugging
 

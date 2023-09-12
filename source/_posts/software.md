@@ -1,8 +1,13 @@
 ---
 title: Frequently Used Softwares
 date: 2023-03-17
-category: Software
-tags: Drawing, IDE, Programming Language, Version Control
+categories:
+  - Software
+tags:
+  - Drawing
+  - IDE
+  - Programming Language
+  - Version Control
 ---
 # Frequently Used Softwares
 
