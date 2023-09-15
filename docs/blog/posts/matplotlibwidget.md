@@ -8,9 +8,10 @@ tags:
   - Qt
   - Matplotlib
 ---
+
 # Matplotlib Widget for PyQt
 
-The following snippet is a `MplWidget` class that can be used in PyQt or PySide applications. 
+The following snippet is a `MplWidget` class that can be used in PyQt or PySide applications.
 It is a `QWidget` that contains a `matplotlib` figure and a toolbar.
 
 ```python

@@ -1,0 +1,41 @@
+site_name: Wang Hailin
+
+repo_url: https://github.com/haiiliin/haiiliin.github.io
+
+nav:
+  - Home: index.md
+  - blog: blog/index.md
+
+theme:
+  name: material
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+  features:
+    - navigation.footer
+    - navigation.sections
+    - navigation.top
+    - search.share
+    - search.suggest
+    - toc.follow
+    - toc.sticky
+
+plugins:
+  - blog:
+      post_url_format: "{slug}"
+  - tags
+  - search
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/haiiliin
