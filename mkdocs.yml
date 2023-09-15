@@ -1,6 +1,7 @@
 site_name: Wang Hailin
 
 repo_url: https://github.com/haiiliin/haiiliin.github.io
+edit_uri: blob/main/docs/
 
 nav:
   - Home: index.md
