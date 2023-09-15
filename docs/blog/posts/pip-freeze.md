@@ -7,9 +7,10 @@ tags:
   - Python
   - Pip
 ---
+
 # Freezing Installed Python Packages
 
-Use the `pip freeze` command to generate a list of installed packages and their versions and save it to the 
+Use the `pip freeze` command to generate a list of installed packages and their versions and save it to the
 `requirements.txt` file.
 
 ```sh

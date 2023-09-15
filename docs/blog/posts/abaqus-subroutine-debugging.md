@@ -8,6 +8,7 @@ tags:
   - Subroutine
   - Debugging
 ---
+
 # abaqus-subroutine-debugging
 
 Debug the abaqus subroutines
@@ -20,7 +21,7 @@ Go the the Abaqus configuration file `abaqus_v6.env` or `win86_64.env` in the Ab
 C:\SIMULIA\EstProducts\2021\win_b64\SMA\site
 ```
 
- The file is like this:
+The file is like this:
 
 ```python
 #-*- mode: python -*-
@@ -35,7 +36,7 @@ C:\SIMULIA\EstProducts\2021\win_b64\SMA\site
 # os.environ['GLOBAL_ENABLE_FPE'] = 'TRUE' # <-- Debugging
 
 # Location of the /include directory in the ABAQUS installation
-abaHomeInc = os.path.abspath(os.path.join(os.environ.get('ABA_HOME', ''), os.pardir)) 
+abaHomeInc = os.path.abspath(os.path.join(os.environ.get('ABA_HOME', ''), os.pardir))
 
 compile_cpp=['cl', '/c', '/W0', '/MD', '/TP',
              '/EHsc', '/DNDEBUG', '/DWIN32', '/DTP_IP', '/D_CONSOLE',
@@ -45,13 +46,13 @@ compile_cpp=['cl', '/c', '/W0', '/MD', '/TP',
              # '/Zi', # <-- Debug symbols
              '/I%I', '/I'+abaHomeInc]
 
-compile_fmu=['win64CmpWrp', '-m64', '-msvc9', 'cl', '/LD', 
+compile_fmu=['win64CmpWrp', '-m64', '-msvc9', 'cl', '/LD',
              '/D_WINDOWS', '/TC', '/W0',  '/I%I', '/I'+abaHomeInc]
 
 ## Fortran compile command for User Subroutines
 
 compile_fortran=['ifort',
-                 '/c', '/fpp', '/extend-source', 
+                 '/c', '/fpp', '/extend-source',
                  '/DABQ_WIN86_64',  '/DABQ_FORTRAN',
                  '/iface:cref', '/recursive',
                  '/Qauto',  # <-- important for thread-safety of parallel user subroutines
@@ -59,7 +60,7 @@ compile_fortran=['ifort',
                  '/Qpc64',                    # set FPU precision to 53 bit significand
                  '/Qprec-div', '/Qprec-sqrt', # improve precision of FP divides and sqrt
                  '/Qfma-',                    # disable floating point fused multiply-add
-                 '/fp:precise',               # floating point model: precise 
+                 '/fp:precise',               # floating point model: precise
                  '/Qimf-arch-consistency:true', # math library consistent results
                  '/Qfp-speculation:safe',     # floating point speculations only when safe
                  '/Qprotect-parens',          # honor parenthesis during expression evaluation
@@ -79,7 +80,7 @@ link_sl=['LINK',
          '/DEFAULTLIB:kernel32.lib', '/DEFAULTLIB:user32.lib', '/DEFAULTLIB:advapi32.lib',
          '/FIXED:NO', '/dll',
          # '/debug', # <-- Debugging
-         '/def:%E', '/out:%U', '%F', '%A', '%L', '%B', 
+         '/def:%E', '/out:%U', '%F', '%A', '%L', '%B',
          'oldnames.lib', 'user32.lib', 'ws2_32.lib', 'netapi32.lib',
          'advapi32.lib', 'msvcrt.lib', 'vcruntime.lib', 'ucrt.lib']
 
@@ -109,7 +110,7 @@ del abaHomeInc
 
 Uncomment all the lines that end with comment of Debugging.
 
-## Insert some extra codes to pause in your subroutine when running Abaqus  
+## Insert some extra codes to pause in your subroutine when running Abaqus
 
 Add some codes like this to pause at the subroutine after the declaration of variables, like this:
 
