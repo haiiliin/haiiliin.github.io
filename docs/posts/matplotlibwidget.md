@@ -1,5 +1,4 @@
 ---
-title: Matplotlib Widget for PyQt
 date: 2023-03-15
 categories:
   - Programming

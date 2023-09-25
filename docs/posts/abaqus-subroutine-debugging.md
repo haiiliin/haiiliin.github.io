@@ -1,5 +1,4 @@
 ---
-title: Debug Abaqus Subroutines
 date: 2023-03-14
 categories:
   - Finite Element Analysis
