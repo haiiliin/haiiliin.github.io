@@ -42,6 +42,7 @@ plugins:
   - blog:
       blog_dir: "."
       post_url_format: "{slug}"
+      archive_date_format: MMMM yyyy
   - tags:
       tags_file: tags.md
   - search
