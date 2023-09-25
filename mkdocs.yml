@@ -1,11 +1,15 @@
-site_name: Wang Hailin
+site_name: Wang Hailin's Blog Website
 
 repo_url: https://github.com/haiiliin/haiiliin.github.io
-edit_uri: blob/main/docs/
+edit_uri: edit/main/docs/
 
 nav:
-  - Home: index.md
-  - Tags: tags.md
+  - Home:
+      - Blog: index.md
+      - Tags: tags.md
+  - Abaqus/Python: /abqpy/
+  - Micromechanics: /micromechanical/
+  - Soil-Structure Interface: /interface/
 
 theme:
   name: material
@@ -23,9 +27,11 @@ theme:
 
   features:
     - content.action.edit
+    - content.action.view
     - content.code.copy
     - navigation.footer
     - navigation.sections
+    - navigation.tabs
     - navigation.top
     - search.share
     - search.suggest
