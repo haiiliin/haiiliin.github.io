@@ -39,6 +39,9 @@ plugins:
   - tags:
       tags_file: tags.md
   - search
+  - git-revision-date-localized:
+      enable_creation_date: true
+      type: timeago
 
 extra:
   social:
