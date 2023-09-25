@@ -5,7 +5,6 @@ edit_uri: blob/main/docs/
 
 nav:
   - Home: index.md
-  - blog: blog/index.md
 
 theme:
   name: material
@@ -34,6 +33,7 @@ theme:
 
 plugins:
   - blog:
+      blog_dir: "."
       post_url_format: "{slug}"
   - tags
   - search
