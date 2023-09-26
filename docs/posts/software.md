@@ -25,6 +25,7 @@ Some frequently used softwares for my daily work.
 - [Notable - The Markdown-based note-taking app that doesn't suck](https://notable.app/)
 - [Notepad++ (notepad-plus-plus.org)](https://notepad-plus-plus.org/)
 - [PyCharm: the Python IDE for Professional Developers by JetBrains](https://www.jetbrains.com/pycharm/)
+- [CLion: A Cross-Platform IDE for C and C++ by JetBrains](https://www.jetbrains.com/clion/)
 - [Sublime Text - Text Editing, Done Right](https://www.sublimetext.com/)
 - [Typora — a markdown editor, markdown reader.](https://typora.io/)
 - [Visual Studio: IDE and Code Editor for Software Developers and Teams (microsoft.com)](https://visualstudio.microsoft.com/)
@@ -32,8 +33,11 @@ Some frequently used softwares for my daily work.
 
 ## Programming Language and Frameworks
 
+- [The LLVM Compiler Infrastructure Project](https://llvm.org/)
+
 - [MATLAB - MathWorks](https://www.mathworks.com/products/matlab.html)
 - [MinGW - Minimalist GNU for Windows download | SourceForge.net](https://sourceforge.net/projects/mingw/)
+- [MSYS2 - Software Distribution and Building Platform for Windows](https://www.msys2.org/)
 - [Welcome to Python.org](https://www.python.org/)
 - [Qt | Cross-platform Software Design and Development Tools](https://www.qt.io/)
 - [TeX Live - TeX Users Group (tug.org)](https://tug.org/texlive/)
@@ -43,3 +47,7 @@ Some frequently used softwares for my daily work.
 
 - [GitHub Desktop | Simple collaboration from your desktop](https://desktop.github.com/)
 - [Git (git-scm.com)](https://git-scm.com/)
+
+## File Archiver
+
+- [7-Zip - A file archiver with a high compression ratio.](https://7-zip.org/)
