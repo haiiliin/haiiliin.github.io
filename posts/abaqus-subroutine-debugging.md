@@ -6,6 +6,7 @@ tags:
   - Abaqus
   - Subroutine
   - Debugging
+comments: true
 ---
 
 # Abaqus Subroutine Debugging

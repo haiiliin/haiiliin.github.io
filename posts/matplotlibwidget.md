@@ -6,6 +6,7 @@ tags:
   - Python
   - Qt
   - Matplotlib
+comments: true
 ---
 
 # Matplotlib Widget for PyQt

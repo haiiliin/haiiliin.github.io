@@ -5,6 +5,7 @@ categories:
 tags:
   - Python
   - Pip
+comments: true
 ---
 
 # Freezing Installed Python Packages

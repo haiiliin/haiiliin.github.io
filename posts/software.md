@@ -7,6 +7,7 @@ tags:
   - IDE
   - Programming Language
   - Version Control
+comments: true
 ---
 
 # Frequently Used Softwares
