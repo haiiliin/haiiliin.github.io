@@ -1,8 +1,7 @@
 site_name: Wang Hailin's Blog Website
 
-docs_dir: .
 repo_url: https://github.com/haiiliin/haiiliin.github.io
-edit_uri: edit/main/
+edit_uri: edit/main/docs
 
 nav:
   - Home:
@@ -41,7 +40,6 @@ theme:
     - toc.sticky
 
 plugins:
-  - same-dir
   - blog:
       blog_dir: "."
       blog_toc: true
