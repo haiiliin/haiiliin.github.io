@@ -52,3 +52,8 @@ Some frequently used softwares for my daily work.
 ## File Archiver
 
 - [7-Zip - A file archiver with a high compression ratio.](https://7-zip.org/)
+
+## Tools
+
+- [Everything](https://www.voidtools.com/)
+- [QL-Win/QuickLook: Bring macOS “Quick Look” feature to Windows (github.com)](https://github.com/QL-Win/QuickLook)
