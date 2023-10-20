@@ -14,15 +14,15 @@
       
       
       <link rel="icon" href="../../assets/images/favicon.png">
-      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.5">
+      <meta name="generator" content="mkdocs-1.5.3, mkdocs-material-9.4.6">
     
     
       
-        <title>March 2023 - Wang Hailin's Blog Website</title>
+        <title>October 2023 - Wang Hailin's Blog Website</title>
       
     
     
-      <link rel="stylesheet" href="../../assets/stylesheets/main.6a10b989.min.css">
+      <link rel="stylesheet" href="../../assets/stylesheets/main.35e1ed30.min.css">
       
         
         <link rel="stylesheet" href="../../assets/stylesheets/palette.356b1318.min.css">
@@ -75,7 +75,7 @@
     <div data-md-component="skip">
       
         
-        <a href="#march-2023" class="md-skip">
+        <a href="#october-2023" class="md-skip">
           Skip to content
         </a>
       
@@ -109,7 +109,7 @@
         <div class="md-header__topic" data-md-component="header-topic">
           <span class="md-ellipsis">
             
-              March 2023
+              October 2023
             
           </span>
         </div>
@@ -472,7 +472,7 @@
           
   
   <span class="md-ellipsis">
-    March 2023
+    October 2023
   </span>
   
 
@@ -483,7 +483,7 @@
         
   
   <span class="md-ellipsis">
-    March 2023
+    October 2023
   </span>
   
 
@@ -503,6 +503,13 @@
       Table of contents
     </label>
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
+      
+        <li class="md-nav__item">
+  <a href="#chatgpt-academic" class="md-nav__link">
+    配置使用 ChatGPT Academic
+  </a>
+  
+</li>
       
         <li class="md-nav__item">
   <a href="#freezing-installed-python-packages" class="md-nav__link">
@@ -587,6 +594,26 @@
             Categories
           </label>
           <ul class="md-nav__list" data-md-scrollfix>
+            
+              
+                
+  
+  
+  
+    <li class="md-nav__item">
+      <a href="../../category/chatgpt/" class="md-nav__link">
+        
+  
+  <span class="md-ellipsis">
+    ChatGPT
+  </span>
+  
+
+      </a>
+    </li>
+  
+
+              
             
               
                 
@@ -747,6 +774,13 @@
     <ul class="md-nav__list" data-md-component="toc" data-md-scrollfix>
       
         <li class="md-nav__item">
+  <a href="#chatgpt-academic" class="md-nav__link">
+    配置使用 ChatGPT Academic
+  </a>
+  
+</li>
+      
+        <li class="md-nav__item">
   <a href="#freezing-installed-python-packages" class="md-nav__link">
     Freezing Installed Python Packages
   </a>
@@ -786,8 +820,60 @@
   <div class="md-content" data-md-component="content">
     <div class="md-content__inner">
       <header class="md-typeset">
-        <h1 id="march-2023">March 2023</h1>
+        <h1 id="october-2023">October 2023</h1>
       </header>
+      
+        <article class="md-post md-post--excerpt">
+  <header class="md-post__header">
+    
+    <div class="md-post__meta md-meta">
+      <ul class="md-meta__list">
+        <li class="md-meta__item">
+          <time datetime="2023-10-20 00:00:00">October 20, 2023</time></li>
+        
+          <li class="md-meta__item">
+            in
+            
+              <a href="../../category/chatgpt/" class="md-meta__link">ChatGPT</a></li>
+        
+        
+          
+          <li class="md-meta__item">
+            
+              1 min read
+            
+          </li>
+        
+      </ul>
+      
+    </div>
+  </header>
+  <div class="md-post__content md-typeset">
+    <h2 id="chatgpt-academic"><a class="toclink" href="../../chatgpt-academic/">配置使用 ChatGPT Academic</a></h2>
+<p>首先，我们需要安装 Python，可以从 <a href="https://www.python.org/downloads/">Python 官网</a> 下载 Python 3.8 - 3.11 安装包（Python 3.12 暂不支持）。
+安装时注意勾选 <code>Add Python to PATH</code> 选项将 Python 安装路径添加到环境变量 <code>PATH</code> 中。
+安装完成后，打开命令行窗口 <code>cmd</code>，输入 <code>python --version</code>，如果显示 Python 版本号，则说明安装成功。使用以下命令安装 <code>chatgpt-academic</code>：</p>
+<pre><code class="language-sh">python -m pip install chatgpt-academic
+</code></pre>
+<p>安装完成后，使用环境变量配置 ChatGPT Academic 项目，具体可查阅 <a href="https://github.com/binary-husky/gpt_academic/wiki/项目配置说明">gpt-academic 项目文档</a>。
+例如，配置 <code>gpt-3.5-turbo</code> 等 <code>OpenAI</code> 模型时，设置名为 <code>API_KEY</code> 的环境变量，值为 <code>OpenAI</code> 的 API 密钥，如：</p>
+<pre><code>sk-123456789xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx123456789
+</code></pre>
+<p>若需使用第三方代理服务提供的 <code>OpenAI</code> 模型，还需配置 <code>API_URL_REDIRECT</code> 环境变量，如：</p>
+<pre><code>{&quot;https://api.openai.com/v1/chat/completions&quot;: &quot;https://reverse-proxy-url/v1/chat/completions&quot;}
+</code></pre>
+<p>配置完成后，在命令行窗口输入 <code>chatgpt-academic</code> 或 <code>gpta</code> 命令，即可启动 ChatGPT Academic 项目。
+<code>chatgpt-academic.exe</code> 和 <code>gpta.exe</code> 可执行文件位于 Python 安装目录下的 <code>Scripts</code> 文件夹中，如：</p>
+<pre><code>C:\Users\{username}\AppData\Local\Programs\Python\Python311\Scripts
+</code></pre>
+<p><code>{username}</code> 为当前用户名，<code>Python311</code> 为 Python 版本号。你可以为 <code>chatgpt-academic</code> 或 <code>gpta</code> 命令创建快捷方式，方便启动项目。</p>
+    <nav class="md-post__action">
+      <a href="../../chatgpt-academic/">
+        Continue reading
+      </a>
+    </nav>
+  </div>
+</article>
       
         <article class="md-post md-post--excerpt">
   <header class="md-post__header">
