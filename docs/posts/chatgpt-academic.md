@@ -11,7 +11,7 @@ comments: true
 
 ## 离线安装包
 
-你可以到 [GitHub Release](https://github.com/haiiliin/gpt_academic/releases) 页面下载 ChatGPT Academic 的离线安装包，解压后安装即可使用。
+你可以到 [GitHub Release](https://github.com/haiiliin/chatgpt-academic/releases) 页面下载 ChatGPT Academic 的离线安装包，解压后安装即可使用。
 
 ## 使用 Python 安装
 
