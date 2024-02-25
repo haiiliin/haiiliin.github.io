@@ -4,12 +4,8 @@ repo_url: https://github.com/haiiliin/haiiliin.github.io
 edit_uri: edit/main/docs
 
 nav:
-  - Home:
-      - Blog: index.md
-      - Tags: tags.md
-  - Abaqus/Python: /abqpy/
-  - Micromechanics: /micromechanical/
-  - Soil-Structure Interface: /interface/
+  - index.md
+  - tags.md
 
 theme:
   name: material
@@ -32,7 +28,6 @@ theme:
     - content.code.copy
     - navigation.footer
     - navigation.sections
-    - navigation.tabs
     - navigation.top
     - search.share
     - search.suggest
