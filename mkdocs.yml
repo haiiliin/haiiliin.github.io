@@ -6,6 +6,7 @@ edit_uri: edit/main/docs
 nav:
   - index.md
   - tags.md
+  - resume.md
 
 theme:
   name: material
