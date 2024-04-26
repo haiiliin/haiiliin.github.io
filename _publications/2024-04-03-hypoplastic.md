@@ -1,0 +1,12 @@
+---
+title: "Uncertainty Quantification of Soil–Structure Interface Properties with an Enhanced Hypoplastic Interface Model"
+collection: publications
+permalink: /publication/2024-04-03-hypoplastic
+excerpt: "Uncertainty Quantification of Soil–Structure Interface Properties with an Enhanced Hypoplastic Interface Model"
+date: 2024-04-03
+venue: "International Journal of Geomechanics"
+paperurl: "https://hailin.wang/files/wang-et-al-2024-uncertainty-quantification-of-soil-structure-interface-properties-with-an-enhanced-hypoplastic.pdf"
+citation: "Wang H.L., Jin Y.F., Yin Z.Y. & Gu X.Q. (2024). &quot;Uncertainty Quantification of Soil–Structure Interface Properties with an Enhanced Hypoplastic Interface Model.&quot; <i>International Journal of Geomechanics</i>. 24(6): 04024103. https://doi.org/10.1061/IJGNAI.GMENG-9248"
+---
+
+Numerous studies have been carried out to characterize uncertainties of soil properties, and lots of multivariate databases have been compiled to make the characterization of uncertainties more realistic. However, when it comes to complex situations, that is, for complex critical state constitutive models and soil–structure interface properties, the uncertainty quantification becomes a challenge. This paper aims to quantify the uncertainties of the soil–structure interface properties from laboratory tests. A framework of uncertainty quantification based on a simplified two-dimensional Monte Carlo simulation is first proposed. To validate the performance of the framework, an enhanced hypoplastic interface model considering particle breakage is then proposed and employed in the uncertainty quantification framework. The CMA-ES algorithm is then used to calibrate the uncertainties based on the framework and the hypoplastic soil–structure interface model. The results showed the proposed framework with the enhanced model can capture the uncertainties of the soil–structure interface properties. In the studied experiments, 30 out of 42 experimental curves were found to be well calibrated based on the Kolmogorov–Smirnov normality test. Furthermore, to obtain acceptable results, based on the calibration-validation process, the effect of the selection of experiments on the calibration performance is discussed. Some suggestions on how to choose experiments to calibrate the soil–structure interface properties are summarized, which should be helpful in practice.
