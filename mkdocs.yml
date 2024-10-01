@@ -6,7 +6,6 @@ edit_uri: edit/main/docs
 nav:
   - Home:
     - index.md
-  - Blog:
     - blog/index.md
     - blog/tags.md
   - GitHub: https://github.com/haiiliin
