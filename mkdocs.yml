@@ -9,6 +9,12 @@ nav:
   - Blog:
     - blog/index.md
     - blog/tags.md
+  - GitHub: https://github.com/haiiliin
+  - Google Scholar: https://scholar.google.com/citations?hl=en&user=-Bb_nmAAAAAJ
+  - ORCID: https://orcid.org/0000-0001-5759-2455
+  - Scopus: https://www.scopus.com/authid/detail.uri?authorId=36452240500
+  - ResearchGate: https://www.researchgate.net/profile/Hailin-Wang-4
+  - PyPI: https://pypi.org/user/hailin
 
 theme:
   name: material
