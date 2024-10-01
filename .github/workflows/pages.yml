@@ -1,0 +1,37 @@
+name: Github Pages
+
+on:
+  push:
+  workflow_dispatch:
+
+concurrency:
+  group: pages-${{ github.workflow }}-${{ github.ref }}
+  cancel-in-progress: true
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+        with:
+          fetch-depth: 0
+      - uses: actions/setup-python@v5
+        with:
+          python-version: "3.12"
+      - name: Install  dependencies
+        run: |
+          python -m pip install --upgrade pip
+          pip install pdm
+          pdm install
+
+      - name: Build mkdocs documentation
+        run: |
+          pdm run mkdocs build
+          echo "hailin.wang" > site/CNAME
+
+      - name: Deploy to GitHub Pages
+        uses: peaceiris/actions-gh-pages@v4
+        with:
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          publish_dir: site
+          force_orphan: true

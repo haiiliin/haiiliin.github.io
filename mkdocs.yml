@@ -1,0 +1,101 @@
+site_name: Hailin Wang's Personal Website
+
+repo_url: https://github.com/haiiliin/haiiliin.github.io
+edit_uri: edit/main/docs
+
+nav:
+  - Home:
+    - index.md
+  - Blog:
+    - blog/index.md
+    - blog/tags.md
+
+theme:
+  name: material
+  palette:
+    # Palette toggle for light mode
+    - scheme: default
+      toggle:
+        icon: material/brightness-7
+        name: Switch to dark mode
+    # Palette toggle for dark mode
+    - scheme: slate
+      toggle:
+        icon: material/brightness-4
+        name: Switch to light mode
+
+  features:
+    - content.action.edit
+    - content.code.copy
+    - content.tabs.link
+    - navigation.footer
+    - navigation.sections
+    - navigation.top
+    - navigation.tabs
+    - navigation.tabs.sticky
+    - search.share
+    - search.suggest
+    - toc.follow
+    - toc.sticky
+
+plugins:
+  - bibtex:
+      bib_file: docs/bibligraphy.bib
+  - blog:
+      blog_dir: blog
+      blog_toc: true
+      archive_toc: true
+      categories_toc: true
+      post_url_format: "{slug}"
+      archive_date_format: MMMM yyyy
+  - git-revision-date-localized:
+      timezone: Asia/Shanghai
+      enable_creation_date: true
+  - rss:
+      match_path: blog/posts/.*
+      date_from_meta:
+        as_creation: date
+      categories:
+        - categories
+        - tags
+  - search
+  - tags:
+      tags_file: blog/tags.md
+
+markdown_extensions:
+  - admonition
+  - def_list
+  - footnotes
+  - pymdownx.arithmatex:
+      generic: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+      line_spans: __span
+      pygments_lang_class: true
+  - pymdownx.inlinehilite
+  - pymdownx.snippets
+  - pymdownx.superfences:
+      custom_fences:
+        - name: mermaid
+          class: mermaid
+  - pymdownx.tabbed:
+      alternate_style: true
+  - pymdownx.highlight:
+      anchor_linenums: true
+  - pymdownx.tasklist:
+      custom_checkbox: true
+
+extra:
+  social:
+    - icon: fontawesome/brands/github
+      link: https://github.com/haiiliin
+    - icon: fontawesome/brands/google-scholar
+      link: https://scholar.google.com/citations?hl=en&user=-Bb_nmAAAAAJ
+    - icon: fontawesome/brands/orcid
+      link: https://orcid.org/0000-0001-5759-2455
+    - icon: simple/scopus
+      link: https://www.scopus.com/authid/detail.uri?authorId=36452240500
+    - icon: fontawesome/brands/researchgate
+      link: https://www.researchgate.net/profile/Hailin-Wang-4
+    - icon: fontawesome/brands/python
+      link: https://pypi.org/user/hailin

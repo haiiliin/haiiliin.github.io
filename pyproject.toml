@@ -1,0 +1,12 @@
+[project]
+dependencies = [
+    "mkdocs",
+    "mkdocs-bibtex",
+    "mkdocs-git-revision-date-localized-plugin",
+    "mkdocs-material",
+    "mkdocs-rss-plugin",
+]
+requires-python = ">=3.10"
+
+[tool.pdm]
+distribution = false
