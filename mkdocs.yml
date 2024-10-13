@@ -12,6 +12,7 @@ nav:
   - GitHub: https://github.com/haiiliin
   - Google Scholar: https://scholar.google.com/citations?hl=en&user=-Bb_nmAAAAAJ
   - ORCID: https://orcid.org/0000-0001-5759-2455
+  - Web of Science: https://www.webofscience.com/wos/author/record/LLL-5948-2024
   - Scopus: https://www.scopus.com/authid/detail.uri?authorId=36452240500
   - ResearchGate: https://www.researchgate.net/profile/Hailin-Wang-4
   - PyPI: https://pypi.org/user/hailin
@@ -99,6 +100,8 @@ extra:
       link: https://scholar.google.com/citations?hl=en&user=-Bb_nmAAAAAJ
     - icon: fontawesome/brands/orcid
       link: https://orcid.org/0000-0001-5759-2455
+    - icon: simple/clarivate
+      link: https://www.webofscience.com/wos/author/record/LLL-5948-2024
     - icon: simple/scopus
       link: https://www.scopus.com/authid/detail.uri?authorId=36452240500
     - icon: fontawesome/brands/researchgate
