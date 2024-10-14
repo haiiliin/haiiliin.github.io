@@ -113,3 +113,6 @@ extra:
       link: https://www.researchgate.net/profile/Hailin-Wang-4
     - icon: fontawesome/brands/python
       link: https://pypi.org/user/hailin
+
+extra_css:
+  - css/publications.css
