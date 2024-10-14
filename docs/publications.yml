@@ -4,19 +4,22 @@ publications:
     conference_short: CJGE
     conference: 岩土工程学报 <strong>(CJGE)</strong>, 2021.
     pdf: https://doi.org/10.11779/CJGE2021S2046
-    image: images/wang2021.png
+    image: /images/wang2021.png
   - title: Uncertainty Quantification of Soil–Structure Interface Properties with an Enhanced Hypoplastic Interface Model
     authors: <strong>Hai-Lin Wang</strong>, Yin-Fu Jin, Zhen-Yu Yin, and Xiao-Qiang Gu
     conference_short: IJG
     conference: International Journal of Geomechanics <strong>(IJG)</strong>, 2024.
     pdf: https://doi.org/10.1061/IJGNAI.GMENG-9248
+    image: /images/wang2024a.png
   - title: Evaluation of Soil–Structure Interface Models
     authors: <strong>Hai-Lin Wang</strong>, Zhen-Yu Yin, Yin-Fu Jin, and Xiao-Qiang Gu
     conference_short: JGGE
     conference: Journal of Geotechnical and Geoenvironmental Engineering <strong>(JGGE)</strong>, 2024.
     pdf: https://doi.org/10.1061/JGGEFK.GTENG-11486
+    image: /images/wang2024b.png
   - title: Evaluation of Soil–Structure Interface Models Considering Cyclic Loading Effect
     authors: <strong>Hai-Lin Wang</strong>, Zhen-Yu Yin, Xiao-Qiang Gu, and Yin-Fu Jin
     conference_short: NAG
     conference: International Journal for Numerical and Analytical Methods in Geomechanics <strong>(NAG)</strong>, 2024.
     pdf: https://doi.org/10.1002/nag.3831
+    image: /images/wang2024c.png
