@@ -1,4 +1,5 @@
 site_name: Hailin Wang's Personal Website
+site_url: https://haiiliin.github.io
 
 repo_url: https://github.com/haiiliin/haiiliin.github.io
 edit_uri: edit/main/docs
@@ -6,6 +7,7 @@ edit_uri: edit/main/docs
 nav:
   - Home:
     - index.md
+    - Publications: publications.md
   - Blog:
     - blog/index.md
     - blog/tags.md
@@ -48,6 +50,9 @@ theme:
 plugins:
   - bibtex:
       bib_file: docs/bibligraphy.bib
+  - gen-files:
+      scripts:
+        - generate-publications.py
   - blog:
       blog_dir: blog
       blog_toc: true
