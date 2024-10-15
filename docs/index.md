@@ -13,8 +13,3 @@ This is the personal website of Hailin Wang. I am a Ph.D. student in the Departm
 - Huazhong University of Science and Technology | <location> Wuhan, China </location> <time> September 2016 – June 2020 </time>
 
 - Fengjie Middle School of Chongqing | <location> Fengjie, Chongqing, China </location> <time> September 2013 – June 2016 </time>
-
-## Publications
-
-- Multivariate probability distribution [@wang2021]
-- Soil-structure interface models [@wang2024a;@wang2024b;@wang2024c]

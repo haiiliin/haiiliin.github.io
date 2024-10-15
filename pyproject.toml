@@ -1,10 +1,13 @@
 [project]
 dependencies = [
+    "jinja2",
     "mkdocs",
     "mkdocs-bibtex",
+    "mkdocs-gen-files",
     "mkdocs-git-revision-date-localized-plugin",
     "mkdocs-material",
     "mkdocs-rss-plugin",
+    "pyyaml",
 ]
 requires-python = ">=3.10"
 
