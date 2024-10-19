@@ -5,7 +5,7 @@ from jinja2 import Template
 
 def generate_publications(
     metadata_file: str = "docs/publications.yml",
-    template_file: str = "docs/templates/publications.html",
+    template_file: str = "docs/templates/publications.md",
     output: str = "publications.md",
 ):
     with open(template_file, "r+", encoding="utf-8") as file:
