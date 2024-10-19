@@ -99,6 +99,8 @@ markdown_extensions:
 
 extra:
   social:
+    - icon: material/email
+      link: mailto:wanghailin@tongji.edu.cn
     - icon: fontawesome/brands/github
       link: https://github.com/haiiliin
     - icon: fontawesome/brands/google-scholar
