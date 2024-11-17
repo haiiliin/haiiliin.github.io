@@ -49,7 +49,7 @@ theme:
 
 plugins:
   - bibtex:
-      bib_file: docs/bibligraphy.bib
+      bib_file: docs/bibliography.bib
   - gen-files:
       scripts:
         - generate-publications.py
