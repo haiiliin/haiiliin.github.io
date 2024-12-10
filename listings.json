@@ -1,0 +1,20 @@
+[
+  {
+    "listing": "/blog/index.html",
+    "items": [
+      "/blog/posts/abaqus-subroutine-debugging.html",
+      "/blog/posts/pip-freeze.html",
+      "/blog/posts/softwares.html",
+      "/blog/posts/matplotlibwidget.html",
+      "/blog/posts/chatgpt-academic.html"
+    ]
+  },
+  {
+    "listing": "/index.html",
+    "items": [
+      "/papers/interface-model-selection.html",
+      "/papers/interface-cyclic-evaluation.html",
+      "/papers/interface-hypoplastic.html"
+    ]
+  }
+]
