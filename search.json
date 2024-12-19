@@ -1,0 +1,292 @@
+[
+  {
+    "objectID": "papers/interface-cyclic-evaluation.html",
+    "href": "papers/interface-cyclic-evaluation.html",
+    "title": "Evaluation of Soil-Structure Interface Models Considering Cyclic Loading Effect",
+    "section": "",
+    "text": "Back to topCitationFor attribution, please cite this work as:\nWang, Hai-Lin, Zhen-Yu Yin, Xiao-Qiang Gu, and Yin-Fu Jin. n.d.\n“Evaluation of Soil-Structure Interface Models Considering Cyclic\nLoading Effect.” International Journal for Numerical and\nAnalytical Methods in Geomechanics 48 (17). https://doi.org/10.1002/nag.3831.",
+    "crumbs": [
+      "Papers",
+      "Evaluation of Soil-Structure Interface Models Considering Cyclic Loading Effect"
+    ]
+  },
+  {
+    "objectID": "papers/interface-hypoplastic.html",
+    "href": "papers/interface-hypoplastic.html",
+    "title": "Uncertainty Quantification of Soil-Structure Interface Properties with an Enhanced Hypoplastic Interface Model",
+    "section": "",
+    "text": "Back to topCitationFor attribution, please cite this work as:\nWang, Hai-Lin, Zhen-Yu Yin, Xiao-Qiang Gu, and Yin-Fu Jin. n.d.\n“Uncertainty Quantification of Soil-Structure Interface Properties\nwith an Enhanced Hypoplastic Interface Model.” International\nJournal of Geomechanics 24 (6). https://doi.org/10.1061/IJGNAI.GMENG-9248.",
+    "crumbs": [
+      "Papers",
+      "Uncertainty Quantification of Soil-Structure Interface Properties with an Enhanced Hypoplastic Interface Model"
+    ]
+  },
+  {
+    "objectID": "blog/posts/pip-freeze.html",
+    "href": "blog/posts/pip-freeze.html",
+    "title": "Freezing Installed Python Packages",
+    "section": "",
+    "text": "Freezing Installed Python Packages\nUse the pip freeze command to generate a list of installed packages and their versions and save it to the requirements.txt file.\npip freeze &gt; requirements.txt\nThe requirements.txt file can be used to install the same packages and versions on another machine.\npip install -r requirements.txt\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Blog",
+      "Posts",
+      "Freezing Installed Python Packages"
+    ]
+  },
+  {
+    "objectID": "blog/posts/abaqus-subroutine-debugging.html",
+    "href": "blog/posts/abaqus-subroutine-debugging.html",
+    "title": "Debug Abaqus Subroutines",
+    "section": "",
+    "text": "Go the the Abaqus configuration file abaqus_v6.env or win86_64.env in the Abaqus path, for me, it locates in the following path:\nC:\\SIMULIA\\EstProducts\\2021\\win_b64\\SMA\\site\nThe file is like this:\n#-*- mode: python -*-\n\n#############################################################################\n#                                                                           #\n#     Compile and Link commands for ABAQUS on the Windows 64 Platform       #\n#                                                                           #\n#############################################################################\n\n# import os # &lt;-- Debugging\n# os.environ['GLOBAL_ENABLE_FPE'] = 'TRUE' # &lt;-- Debugging\n\n# Location of the /include directory in the ABAQUS installation\nabaHomeInc = os.path.abspath(os.path.join(os.environ.get('ABA_HOME', ''), os.pardir))\n\ncompile_cpp=['cl', '/c', '/W0', '/MD', '/TP',\n             '/EHsc', '/DNDEBUG', '/DWIN32', '/DTP_IP', '/D_CONSOLE',\n             '/DNTI', '/DFLT_LIC', '/DOL_DOC', '/D__LIB__', '/DHKS_NT',\n             '/D_WINDOWS_SOURCE', '/DFAR=', '/D_WINDOWS', '/DABQ_WIN86_64', '%P',\n             # '/O1', # &lt;-- Optimization\n             # '/Zi', # &lt;-- Debug symbols\n             '/I%I', '/I'+abaHomeInc]\n\ncompile_fmu=['win64CmpWrp', '-m64', '-msvc9', 'cl', '/LD',\n             '/D_WINDOWS', '/TC', '/W0',  '/I%I', '/I'+abaHomeInc]\n\n## Fortran compile command for User Subroutines\n\ncompile_fortran=['ifort',\n                 '/c', '/fpp', '/extend-source',\n                 '/DABQ_WIN86_64',  '/DABQ_FORTRAN',\n                 '/iface:cref', '/recursive',\n                 '/Qauto',  # &lt;-- important for thread-safety of parallel user subroutines\n                 '/align:array64byte',\n                 '/Qpc64',                    # set FPU precision to 53 bit significand\n                 '/Qprec-div', '/Qprec-sqrt', # improve precision of FP divides and sqrt\n                 '/Qfma-',                    # disable floating point fused multiply-add\n                 '/fp:precise',               # floating point model: precise\n                 '/Qimf-arch-consistency:true', # math library consistent results\n                 '/Qfp-speculation:safe',     # floating point speculations only when safe\n                 '/Qprotect-parens',          # honor parenthesis during expression evaluation\n                 '/Qfp-stack-check',          # enable stack overflow protection checks\n                 '/reentrancy:threaded',      # important for thread-safety\n                 #'/Qinit=zero','/Qinit=arrays',  # automatically initialize all arrays to zero\n                 #'/Qinit=snan', '/Qinit=arrays', # automatically initialize all arrays to SNAN\n                 '/QxSSE3', '/QaxAVX',        # generate SSE3, SSE2, and SSE instructions\n                 # '/Od', '/Ob0',  # &lt;-- Disable Optimization for Debugging\n                 # '/Zi',          # &lt;-- Debugging Information\n                 '/include:%I', '/include:'+abaHomeInc, '%P']\n\nlink_sl=['LINK',\n         '/nologo', '/NOENTRY', '/INCREMENTAL:NO', '/subsystem:console', '/machine:AMD64',\n         '/NODEFAULTLIB:LIBC.LIB', '/NODEFAULTLIB:LIBCMT.LIB',\n         '/DEFAULTLIB:OLDNAMES.LIB', '/DEFAULTLIB:LIBIFCOREMD.LIB', '/DEFAULTLIB:LIBIFPORTMD.LIB', '/DEFAULTLIB:LIBMMD.LIB',\n         '/DEFAULTLIB:kernel32.lib', '/DEFAULTLIB:user32.lib', '/DEFAULTLIB:advapi32.lib',\n         '/FIXED:NO', '/dll',\n         # '/debug', # &lt;-- Debugging\n         '/def:%E', '/out:%U', '%F', '%A', '%L', '%B',\n         'oldnames.lib', 'user32.lib', 'ws2_32.lib', 'netapi32.lib',\n         'advapi32.lib', 'msvcrt.lib', 'vcruntime.lib', 'ucrt.lib']\n\nlink_exe=['LINK',\n          '/nologo', '/INCREMENTAL:NO', '/subsystem:console', '/machine:AMD64', '/STACK:20000000',\n          '/NODEFAULTLIB:LIBC.LIB', '/NODEFAULTLIB:LIBCMT.LIB', '/DEFAULTLIB:OLDNAMES.LIB', '/DEFAULTLIB:LIBIFCOREMD.LIB',\n          '/DEFAULTLIB:LIBIFPORTMD.LIB', '/DEFAULTLIB:LIBMMD.LIB', '/DEFAULTLIB:kernel32.lib',\n          '/DEFAULTLIB:user32.lib', '/DEFAULTLIB:advapi32.lib',\n          '/FIXED:NO', '/LARGEADDRESSAWARE',\n          # '/debug', # &lt;-- Debugging\n          '/out:%J', '%F', '%M', '%L', '%B', '%O',\n          'oldnames.lib', 'user32.lib', 'ws2_32.lib', 'netapi32.lib',\n          'advapi32.lib', 'msvcrt.lib', 'vcruntime.lib', 'ucrt.lib']\n\n## Link command to be used for ABAQUS/MAKE on machines without the Fortran compiler.\n## Uncomment it to enable.\n#\n#link_exe=['LINK', '/nologo', '/INCREMENTAL:NO', '/subsystem:console', '/machine:AMD64', '/NODEFAULTLIB:LIBC.LIB', '/NODEFAULTLIB:LIBCMT.LIB',\n#          '/DEFAULTLIB:OLDNAMES.LIB', '/DEFAULTLIB:MSVCRT.LIB', '/DEFAULTLIB:kernel32.lib', '/DEFAULTLIB:user32.lib', '/DEFAULTLIB:advapi32.lib',\n#          '/FIXED:NO', '/LARGEADDRESSAWARE', '/out:%J', '%F', '%M', '%L', '%B', '%O',\n#         'oldnames.lib', 'user32.lib', 'ws2_32.lib', 'netapi32.lib',\n#         'advapi32.lib', 'msvcrt.lib', 'vcruntime.lib', 'ucrt.lib']\n\n# Remove the temporary names from the namespace\ndel abaHomeInc\nUncomment all the lines that end with comment of Debugging.\n\n\n\nAdd some codes like this to pause at the subroutine after the declaration of variables, like this:\n!-------------------------- FOR DEBUGGING ------------------------------------\nLOGICAL :: FIRSTRUN = .TRUE.\nINTEGER TEMPVAR\nIF (FIRSTRUN == .TRUE.) THEN\n    WRITE(*, *) 'PLEASE INPUT A VALUE:'\n    READ(*, *) TEMPVAR\n    FIRSTRUN = .FALSE.\nEND IF\nTEMPVAR = 1234\n\n\n\nUse the Abaqus command to submit the job, like this\nabaqus job=Job-1 user=FRIC_coulomb int\nIf you have added some code to pause in the subroutine, the program will stop in the command window, like this\n10/30/2021 11:51:14 PM\nBegin Analysis Input File Processor\n10/30/2021 11:51:14 PM\nRun pre.exe\n10/30/2021 11:51:17 PM\nEnd Analysis Input File Processor\nBegin Abaqus/Standard Analysis\n10/30/2021 11:51:17 PM\nRun standard.exe\nPLEASE INPUT A VALUE:\n\n\n\nOpen your subroutine file in Visual Studio, click Debug -&gt; Attach to Process, choose the Abaqus program standard.exe or explicit_dp.exe.\n\n\n\nAdd a breakpoint in the subroutine file in Visual Studio, resume running the subroutine in the command window, i.e., input the temporary value, the subroutine will stop in Visual Studio, and now you can debug your subroutine in Visual Studio!\n\n\n\nAbaqus CAE cannot be opened if the debug mode is activated, change the configuration file to the old version and you can open Abqus CAE again.",
+    "crumbs": [
+      "Blog",
+      "Posts",
+      "Debug Abaqus Subroutines"
+    ]
+  },
+  {
+    "objectID": "blog/posts/abaqus-subroutine-debugging.html#enable-debugging-feature-in-abaqus",
+    "href": "blog/posts/abaqus-subroutine-debugging.html#enable-debugging-feature-in-abaqus",
+    "title": "Debug Abaqus Subroutines",
+    "section": "",
+    "text": "Go the the Abaqus configuration file abaqus_v6.env or win86_64.env in the Abaqus path, for me, it locates in the following path:\nC:\\SIMULIA\\EstProducts\\2021\\win_b64\\SMA\\site\nThe file is like this:\n#-*- mode: python -*-\n\n#############################################################################\n#                                                                           #\n#     Compile and Link commands for ABAQUS on the Windows 64 Platform       #\n#                                                                           #\n#############################################################################\n\n# import os # &lt;-- Debugging\n# os.environ['GLOBAL_ENABLE_FPE'] = 'TRUE' # &lt;-- Debugging\n\n# Location of the /include directory in the ABAQUS installation\nabaHomeInc = os.path.abspath(os.path.join(os.environ.get('ABA_HOME', ''), os.pardir))\n\ncompile_cpp=['cl', '/c', '/W0', '/MD', '/TP',\n             '/EHsc', '/DNDEBUG', '/DWIN32', '/DTP_IP', '/D_CONSOLE',\n             '/DNTI', '/DFLT_LIC', '/DOL_DOC', '/D__LIB__', '/DHKS_NT',\n             '/D_WINDOWS_SOURCE', '/DFAR=', '/D_WINDOWS', '/DABQ_WIN86_64', '%P',\n             # '/O1', # &lt;-- Optimization\n             # '/Zi', # &lt;-- Debug symbols\n             '/I%I', '/I'+abaHomeInc]\n\ncompile_fmu=['win64CmpWrp', '-m64', '-msvc9', 'cl', '/LD',\n             '/D_WINDOWS', '/TC', '/W0',  '/I%I', '/I'+abaHomeInc]\n\n## Fortran compile command for User Subroutines\n\ncompile_fortran=['ifort',\n                 '/c', '/fpp', '/extend-source',\n                 '/DABQ_WIN86_64',  '/DABQ_FORTRAN',\n                 '/iface:cref', '/recursive',\n                 '/Qauto',  # &lt;-- important for thread-safety of parallel user subroutines\n                 '/align:array64byte',\n                 '/Qpc64',                    # set FPU precision to 53 bit significand\n                 '/Qprec-div', '/Qprec-sqrt', # improve precision of FP divides and sqrt\n                 '/Qfma-',                    # disable floating point fused multiply-add\n                 '/fp:precise',               # floating point model: precise\n                 '/Qimf-arch-consistency:true', # math library consistent results\n                 '/Qfp-speculation:safe',     # floating point speculations only when safe\n                 '/Qprotect-parens',          # honor parenthesis during expression evaluation\n                 '/Qfp-stack-check',          # enable stack overflow protection checks\n                 '/reentrancy:threaded',      # important for thread-safety\n                 #'/Qinit=zero','/Qinit=arrays',  # automatically initialize all arrays to zero\n                 #'/Qinit=snan', '/Qinit=arrays', # automatically initialize all arrays to SNAN\n                 '/QxSSE3', '/QaxAVX',        # generate SSE3, SSE2, and SSE instructions\n                 # '/Od', '/Ob0',  # &lt;-- Disable Optimization for Debugging\n                 # '/Zi',          # &lt;-- Debugging Information\n                 '/include:%I', '/include:'+abaHomeInc, '%P']\n\nlink_sl=['LINK',\n         '/nologo', '/NOENTRY', '/INCREMENTAL:NO', '/subsystem:console', '/machine:AMD64',\n         '/NODEFAULTLIB:LIBC.LIB', '/NODEFAULTLIB:LIBCMT.LIB',\n         '/DEFAULTLIB:OLDNAMES.LIB', '/DEFAULTLIB:LIBIFCOREMD.LIB', '/DEFAULTLIB:LIBIFPORTMD.LIB', '/DEFAULTLIB:LIBMMD.LIB',\n         '/DEFAULTLIB:kernel32.lib', '/DEFAULTLIB:user32.lib', '/DEFAULTLIB:advapi32.lib',\n         '/FIXED:NO', '/dll',\n         # '/debug', # &lt;-- Debugging\n         '/def:%E', '/out:%U', '%F', '%A', '%L', '%B',\n         'oldnames.lib', 'user32.lib', 'ws2_32.lib', 'netapi32.lib',\n         'advapi32.lib', 'msvcrt.lib', 'vcruntime.lib', 'ucrt.lib']\n\nlink_exe=['LINK',\n          '/nologo', '/INCREMENTAL:NO', '/subsystem:console', '/machine:AMD64', '/STACK:20000000',\n          '/NODEFAULTLIB:LIBC.LIB', '/NODEFAULTLIB:LIBCMT.LIB', '/DEFAULTLIB:OLDNAMES.LIB', '/DEFAULTLIB:LIBIFCOREMD.LIB',\n          '/DEFAULTLIB:LIBIFPORTMD.LIB', '/DEFAULTLIB:LIBMMD.LIB', '/DEFAULTLIB:kernel32.lib',\n          '/DEFAULTLIB:user32.lib', '/DEFAULTLIB:advapi32.lib',\n          '/FIXED:NO', '/LARGEADDRESSAWARE',\n          # '/debug', # &lt;-- Debugging\n          '/out:%J', '%F', '%M', '%L', '%B', '%O',\n          'oldnames.lib', 'user32.lib', 'ws2_32.lib', 'netapi32.lib',\n          'advapi32.lib', 'msvcrt.lib', 'vcruntime.lib', 'ucrt.lib']\n\n## Link command to be used for ABAQUS/MAKE on machines without the Fortran compiler.\n## Uncomment it to enable.\n#\n#link_exe=['LINK', '/nologo', '/INCREMENTAL:NO', '/subsystem:console', '/machine:AMD64', '/NODEFAULTLIB:LIBC.LIB', '/NODEFAULTLIB:LIBCMT.LIB',\n#          '/DEFAULTLIB:OLDNAMES.LIB', '/DEFAULTLIB:MSVCRT.LIB', '/DEFAULTLIB:kernel32.lib', '/DEFAULTLIB:user32.lib', '/DEFAULTLIB:advapi32.lib',\n#          '/FIXED:NO', '/LARGEADDRESSAWARE', '/out:%J', '%F', '%M', '%L', '%B', '%O',\n#         'oldnames.lib', 'user32.lib', 'ws2_32.lib', 'netapi32.lib',\n#         'advapi32.lib', 'msvcrt.lib', 'vcruntime.lib', 'ucrt.lib']\n\n# Remove the temporary names from the namespace\ndel abaHomeInc\nUncomment all the lines that end with comment of Debugging.",
+    "crumbs": [
+      "Blog",
+      "Posts",
+      "Debug Abaqus Subroutines"
+    ]
+  },
+  {
+    "objectID": "blog/posts/abaqus-subroutine-debugging.html#insert-some-extra-codes-to-pause-in-your-subroutine-when-running-abaqus",
+    "href": "blog/posts/abaqus-subroutine-debugging.html#insert-some-extra-codes-to-pause-in-your-subroutine-when-running-abaqus",
+    "title": "Debug Abaqus Subroutines",
+    "section": "",
+    "text": "Add some codes like this to pause at the subroutine after the declaration of variables, like this:\n!-------------------------- FOR DEBUGGING ------------------------------------\nLOGICAL :: FIRSTRUN = .TRUE.\nINTEGER TEMPVAR\nIF (FIRSTRUN == .TRUE.) THEN\n    WRITE(*, *) 'PLEASE INPUT A VALUE:'\n    READ(*, *) TEMPVAR\n    FIRSTRUN = .FALSE.\nEND IF\nTEMPVAR = 1234",
+    "crumbs": [
+      "Blog",
+      "Posts",
+      "Debug Abaqus Subroutines"
+    ]
+  },
+  {
+    "objectID": "blog/posts/abaqus-subroutine-debugging.html#run-abaqus-command-to-submit-the-job",
+    "href": "blog/posts/abaqus-subroutine-debugging.html#run-abaqus-command-to-submit-the-job",
+    "title": "Debug Abaqus Subroutines",
+    "section": "",
+    "text": "Use the Abaqus command to submit the job, like this\nabaqus job=Job-1 user=FRIC_coulomb int\nIf you have added some code to pause in the subroutine, the program will stop in the command window, like this\n10/30/2021 11:51:14 PM\nBegin Analysis Input File Processor\n10/30/2021 11:51:14 PM\nRun pre.exe\n10/30/2021 11:51:17 PM\nEnd Analysis Input File Processor\nBegin Abaqus/Standard Analysis\n10/30/2021 11:51:17 PM\nRun standard.exe\nPLEASE INPUT A VALUE:",
+    "crumbs": [
+      "Blog",
+      "Posts",
+      "Debug Abaqus Subroutines"
+    ]
+  },
+  {
+    "objectID": "blog/posts/abaqus-subroutine-debugging.html#attach-to-process-in-visual-studio",
+    "href": "blog/posts/abaqus-subroutine-debugging.html#attach-to-process-in-visual-studio",
+    "title": "Debug Abaqus Subroutines",
+    "section": "",
+    "text": "Open your subroutine file in Visual Studio, click Debug -&gt; Attach to Process, choose the Abaqus program standard.exe or explicit_dp.exe.",
+    "crumbs": [
+      "Blog",
+      "Posts",
+      "Debug Abaqus Subroutines"
+    ]
+  },
+  {
+    "objectID": "blog/posts/abaqus-subroutine-debugging.html#resume-running-the-subroutine-and-debug-in-visual-studio",
+    "href": "blog/posts/abaqus-subroutine-debugging.html#resume-running-the-subroutine-and-debug-in-visual-studio",
+    "title": "Debug Abaqus Subroutines",
+    "section": "",
+    "text": "Add a breakpoint in the subroutine file in Visual Studio, resume running the subroutine in the command window, i.e., input the temporary value, the subroutine will stop in Visual Studio, and now you can debug your subroutine in Visual Studio!",
+    "crumbs": [
+      "Blog",
+      "Posts",
+      "Debug Abaqus Subroutines"
+    ]
+  },
+  {
+    "objectID": "blog/posts/abaqus-subroutine-debugging.html#warning",
+    "href": "blog/posts/abaqus-subroutine-debugging.html#warning",
+    "title": "Debug Abaqus Subroutines",
+    "section": "",
+    "text": "Abaqus CAE cannot be opened if the debug mode is activated, change the configuration file to the old version and you can open Abqus CAE again.",
+    "crumbs": [
+      "Blog",
+      "Posts",
+      "Debug Abaqus Subroutines"
+    ]
+  },
+  {
+    "objectID": "blog/index.html",
+    "href": "blog/index.html",
+    "title": "Blog",
+    "section": "",
+    "text": "Academic\n\n\nFEM\n\n\nAbaqus\n\n\nSubroutine\n\n\nDebugging\n\n\n\n\n\n\n\n\n\nMar 14, 2023\n\n\nHailin Wang\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAcademic\n\n\nPython\n\n\nPip\n\n\n\n\n\n\n\n\n\nMar 17, 2023\n\n\nHailin Wang\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAcademic\n\n\nDrawing\n\n\nIDE\n\n\nProgramming Language\n\n\nVersion Control\n\n\n\n\n\n\n\n\n\nMar 17, 2023\n\n\nHailin Wang\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAcademic\n\n\nPython\n\n\nQt\n\n\nMatplotlib\n\n\n\n\n\n\n\n\n\nMar 15, 2023\n\n\nHailin Wang\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAcademic\n\n\nPython\n\n\n\n\n\n\n\n\n\nOct 20, 2023\n\n\nHailin Wang\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Blog"
+    ]
+  },
+  {
+    "objectID": "blog/index.html#posts",
+    "href": "blog/index.html#posts",
+    "title": "Blog",
+    "section": "",
+    "text": "Academic\n\n\nFEM\n\n\nAbaqus\n\n\nSubroutine\n\n\nDebugging\n\n\n\n\n\n\n\n\n\nMar 14, 2023\n\n\nHailin Wang\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAcademic\n\n\nPython\n\n\nPip\n\n\n\n\n\n\n\n\n\nMar 17, 2023\n\n\nHailin Wang\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAcademic\n\n\nDrawing\n\n\nIDE\n\n\nProgramming Language\n\n\nVersion Control\n\n\n\n\n\n\n\n\n\nMar 17, 2023\n\n\nHailin Wang\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAcademic\n\n\nPython\n\n\nQt\n\n\nMatplotlib\n\n\n\n\n\n\n\n\n\nMar 15, 2023\n\n\nHailin Wang\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\n\nAcademic\n\n\nPython\n\n\n\n\n\n\n\n\n\nOct 20, 2023\n\n\nHailin Wang\n\n\n\n\n\n\nNo matching items",
+    "crumbs": [
+      "Blog"
+    ]
+  },
+  {
+    "objectID": "index.html",
+    "href": "index.html",
+    "title": "Multiscale Modeling of Granular Materials",
+    "section": "",
+    "text": "This is the website for academic papers written by Hailin Wang.\n\n\nThe Hong Kong Polytechnic University | Hong Kong, China Ph.D. in Geotechnical Engineering | Sept 2021 - Present\nTongji University | Shanghai, China Ph.D. in Geotechnical Engineering | Sept 2020 - Present\nHuazhong University of Science and Technology | Wuhan, China B.A in Civil Engineering | Sept 2016 - June 2020"
+  },
+  {
+    "objectID": "index.html#education",
+    "href": "index.html#education",
+    "title": "Multiscale Modeling of Granular Materials",
+    "section": "",
+    "text": "The Hong Kong Polytechnic University | Hong Kong, China Ph.D. in Geotechnical Engineering | Sept 2021 - Present\nTongji University | Shanghai, China Ph.D. in Geotechnical Engineering | Sept 2020 - Present\nHuazhong University of Science and Technology | Wuhan, China B.A in Civil Engineering | Sept 2016 - June 2020"
+  },
+  {
+    "objectID": "index.html#papers",
+    "href": "index.html#papers",
+    "title": "Multiscale Modeling of Granular Materials",
+    "section": "Papers",
+    "text": "Papers\n\n\n   \n     \n     \n       Order By\n       Default\n         \n          Title\n        \n         \n          Author\n        \n     \n  \n    \n      \n      \n    \n\n\n\n\n\nTitle\n\n\nAuthor\n\n\n\n\n\n\nEvaluation of Soil-Structure Interface Models\n\n\nHai-Lin Wang, Zhen-Yu Yin, Yin-Fu Jin, Xiao-Qiang Gu\n\n\n\n\nEvaluation of Soil-Structure Interface Models Considering Cyclic Loading Effect\n\n\nHai-Lin Wang, Zhen-Yu Yin, Xiao-Qiang Gu, Yin-Fu Jin\n\n\n\n\nUncertainty Quantification of Soil-Structure Interface Properties with an Enhanced Hypoplastic Interface Model\n\n\nHai-Lin Wang, Zhen-Yu Yin, Xiao-Qiang Gu, Yin-Fu Jin\n\n\n\n\n\nNo matching items"
+  },
+  {
+    "objectID": "blog/posts/softwares.html",
+    "href": "blog/posts/softwares.html",
+    "title": "Frequently Used Softwares",
+    "section": "",
+    "text": "Some frequently used softwares for my daily work.\n\n\n\nGeoGebra - the world’s favorite, free math tools used by over 100 million students and teachers\nDraw Freely - Inkscape\nOriginLab - Origin and OriginPro - Data Analysis and Graphing Software\n\n\n\n\n\nmarktext/marktext: 📝A simple and elegant markdown editor, available for Linux, macOS and Windows. (github.com)\nNotable - The Markdown-based note-taking app that doesn’t suck\nNotepad++ (notepad-plus-plus.org)\nPyCharm: the Python IDE for Professional Developers by JetBrains\nSublime Text - Text Editing, Done Right\nTypora - a markdown editor, markdown reader.\nVisual Studio: IDE and Code Editor for Software Developers and Teams (microsoft.com)\nVisual Studio Code - Code Editing. Redefined\n\n\n\n\n\nMATLAB - MathWorks\nMinGW - Minimalist GNU for Windows download\nWelcome to Python.org\nQt - Cross-platform Software Design and Development Tools\nTeX Live - TeX Users Group (tug.org)\n清华大学开源软件镜像站 - Tsinghua Open Source Mirror\n\n\n\n\n\nGitHub Desktop - Simple collaboration from your desktop\nGit (git-scm.com)",
+    "crumbs": [
+      "Blog",
+      "Posts",
+      "Frequently Used Softwares"
+    ]
+  },
+  {
+    "objectID": "blog/posts/softwares.html#drawing",
+    "href": "blog/posts/softwares.html#drawing",
+    "title": "Frequently Used Softwares",
+    "section": "",
+    "text": "GeoGebra - the world’s favorite, free math tools used by over 100 million students and teachers\nDraw Freely - Inkscape\nOriginLab - Origin and OriginPro - Data Analysis and Graphing Software",
+    "crumbs": [
+      "Blog",
+      "Posts",
+      "Frequently Used Softwares"
+    ]
+  },
+  {
+    "objectID": "blog/posts/softwares.html#ides-and-code-editors",
+    "href": "blog/posts/softwares.html#ides-and-code-editors",
+    "title": "Frequently Used Softwares",
+    "section": "",
+    "text": "marktext/marktext: 📝A simple and elegant markdown editor, available for Linux, macOS and Windows. (github.com)\nNotable - The Markdown-based note-taking app that doesn’t suck\nNotepad++ (notepad-plus-plus.org)\nPyCharm: the Python IDE for Professional Developers by JetBrains\nSublime Text - Text Editing, Done Right\nTypora - a markdown editor, markdown reader.\nVisual Studio: IDE and Code Editor for Software Developers and Teams (microsoft.com)\nVisual Studio Code - Code Editing. Redefined",
+    "crumbs": [
+      "Blog",
+      "Posts",
+      "Frequently Used Softwares"
+    ]
+  },
+  {
+    "objectID": "blog/posts/softwares.html#programming-language-and-frameworks",
+    "href": "blog/posts/softwares.html#programming-language-and-frameworks",
+    "title": "Frequently Used Softwares",
+    "section": "",
+    "text": "MATLAB - MathWorks\nMinGW - Minimalist GNU for Windows download\nWelcome to Python.org\nQt - Cross-platform Software Design and Development Tools\nTeX Live - TeX Users Group (tug.org)\n清华大学开源软件镜像站 - Tsinghua Open Source Mirror",
+    "crumbs": [
+      "Blog",
+      "Posts",
+      "Frequently Used Softwares"
+    ]
+  },
+  {
+    "objectID": "blog/posts/softwares.html#version-control",
+    "href": "blog/posts/softwares.html#version-control",
+    "title": "Frequently Used Softwares",
+    "section": "",
+    "text": "GitHub Desktop - Simple collaboration from your desktop\nGit (git-scm.com)",
+    "crumbs": [
+      "Blog",
+      "Posts",
+      "Frequently Used Softwares"
+    ]
+  },
+  {
+    "objectID": "blog/posts/matplotlibwidget.html",
+    "href": "blog/posts/matplotlibwidget.html",
+    "title": "Matplotlib Widget for PyQt",
+    "section": "",
+    "text": "Matplotlib Widget for PyQt\nThe following snippet is a MplWidget class that can be used in PyQt or PySide applications. It is a QWidget that contains a matplotlib figure and a toolbar.\nimport matplotlib.pyplot as plt\nfrom matplotlib.backends.backend_qtagg import FigureCanvasQTAgg as FigureCanvas\nfrom matplotlib.backends.backend_qtagg import NavigationToolbar2QT as NavigationToolbar\nfrom matplotlib.figure import Figure\nfrom qtpy import QtWidgets\n\nclass MplWidget(QtWidgets.QWidget):\n    \"\"\"A PyQt/Pyside widget that contains a matplotlib figure\"\"\"\n\n    #: Matplotlib figure\n    figure: Figure\n    #: Figure canvas\n    canvas: FigureCanvas\n\n    def __init__(self, figure: Figure = None, toolbar: bool = True, parent=None, *args, **kwargs):\n        \"\"\"Create a new Matplotlib widget\n\n        Parameters\n        ----------\n        figure : matplotlib.figure.Figure, optional\n            Figure to use, by default None\n        toolbar : bool, optional\n            Whether to show the toolbar, by default True\n        parent : QtWidgets.QWidget, optional\n            Parent widget, by default None\n        args, kwargs\n            Additional arguments passed to the QWidget constructor\n        \"\"\"\n        super().__init__(parent, *args, **kwargs)\n\n        # Figure elements\n        self.figure = figure or plt.figure()\n        self.canvas = FigureCanvas(self.figure)\n        self.canvas.setParent(self)\n        self.toolbar = NavigationToolbar(self.canvas, self) if toolbar else None\n\n        # Layout\n        self.layout = QtWidgets.QVBoxLayout(self)\n        self.layout.setContentsMargins(0, 0, 0, 0)\n        self.layout.addWidget(self.toolbar)\n        self.layout.addWidget(self.canvas)\n\n    def draw(self):\n        \"\"\"Redraw the figure\"\"\"\n        self.canvas.draw()\n\n\n\n\n Back to top",
+    "crumbs": [
+      "Blog",
+      "Posts",
+      "Matplotlib Widget for PyQt"
+    ]
+  },
+  {
+    "objectID": "blog/posts/chatgpt-academic.html",
+    "href": "blog/posts/chatgpt-academic.html",
+    "title": "配置使用 ChatGPT Academic",
+    "section": "",
+    "text": "你可以到 GitHub Release 页面下载 ChatGPT Academic 的离线安装包，解压后安装即可使用。\n\n\n\n首先，你需要安装 Python，可以从 Python 官网 下载 Python 3.8 - 3.11 安装包（Python 3.12 暂不支持）。 安装时注意勾选 Add Python to PATH 选项将 Python 安装路径添加到环境变量 PATH 中。 安装完成后，打开命令行窗口 cmd，输入 python --version，如果显示 Python 版本号，则说明安装成功。使用以下命令安装 chatgpt-academic：\npython -m pip install chatgpt-academic\n\n\n\n安装完成后，使用环境变量配置 ChatGPT Academic 项目，具体可查阅 gpt-academic 项目文档。 例如，配置 gpt-3.5-turbo 等 OpenAI 模型时，设置名为 API_KEY 的环境变量，值为 OpenAI 的 API 密钥，如：\nsk-123456789xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx123456789\n若需使用第三方代理服务提供的 OpenAI 模型，还需配置 API_URL_REDIRECT 环境变量，如：\n{\"https://api.openai.com/v1/chat/completions\": \"https://reverse-proxy-url/v1/chat/completions\"}\n配置完成后，在命令行窗口输入 chatgpt-academic 或 gpta 命令，即可启动 ChatGPT Academic 项目。 chatgpt-academic.exe 和 gpta.exe 可执行文件位于 Python 安装目录下的 Scripts 文件夹中，如：\nC:\\Users\\{username}\\AppData\\Local\\Programs\\Python\\Python311\\Scripts\n{username} 为当前用户名，Python311 为 Python 版本号。你可以为 chatgpt-academic 或 gpta 命令创建快捷方式，方便启动项目。",
+    "crumbs": [
+      "Blog",
+      "Posts",
+      "配置使用 ChatGPT Academic"
+    ]
+  },
+  {
+    "objectID": "blog/posts/chatgpt-academic.html#离线安装包",
+    "href": "blog/posts/chatgpt-academic.html#离线安装包",
+    "title": "配置使用 ChatGPT Academic",
+    "section": "",
+    "text": "你可以到 GitHub Release 页面下载 ChatGPT Academic 的离线安装包，解压后安装即可使用。",
+    "crumbs": [
+      "Blog",
+      "Posts",
+      "配置使用 ChatGPT Academic"
+    ]
+  },
+  {
+    "objectID": "blog/posts/chatgpt-academic.html#使用-python-安装",
+    "href": "blog/posts/chatgpt-academic.html#使用-python-安装",
+    "title": "配置使用 ChatGPT Academic",
+    "section": "",
+    "text": "首先，你需要安装 Python，可以从 Python 官网 下载 Python 3.8 - 3.11 安装包（Python 3.12 暂不支持）。 安装时注意勾选 Add Python to PATH 选项将 Python 安装路径添加到环境变量 PATH 中。 安装完成后，打开命令行窗口 cmd，输入 python --version，如果显示 Python 版本号，则说明安装成功。使用以下命令安装 chatgpt-academic：\npython -m pip install chatgpt-academic",
+    "crumbs": [
+      "Blog",
+      "Posts",
+      "配置使用 ChatGPT Academic"
+    ]
+  },
+  {
+    "objectID": "blog/posts/chatgpt-academic.html#配置环境变量",
+    "href": "blog/posts/chatgpt-academic.html#配置环境变量",
+    "title": "配置使用 ChatGPT Academic",
+    "section": "",
+    "text": "安装完成后，使用环境变量配置 ChatGPT Academic 项目，具体可查阅 gpt-academic 项目文档。 例如，配置 gpt-3.5-turbo 等 OpenAI 模型时，设置名为 API_KEY 的环境变量，值为 OpenAI 的 API 密钥，如：\nsk-123456789xxxxxxxxxxxxxxxxxxxxxxxxxxxxxx123456789\n若需使用第三方代理服务提供的 OpenAI 模型，还需配置 API_URL_REDIRECT 环境变量，如：\n{\"https://api.openai.com/v1/chat/completions\": \"https://reverse-proxy-url/v1/chat/completions\"}\n配置完成后，在命令行窗口输入 chatgpt-academic 或 gpta 命令，即可启动 ChatGPT Academic 项目。 chatgpt-academic.exe 和 gpta.exe 可执行文件位于 Python 安装目录下的 Scripts 文件夹中，如：\nC:\\Users\\{username}\\AppData\\Local\\Programs\\Python\\Python311\\Scripts\n{username} 为当前用户名，Python311 为 Python 版本号。你可以为 chatgpt-academic 或 gpta 命令创建快捷方式，方便启动项目。",
+    "crumbs": [
+      "Blog",
+      "Posts",
+      "配置使用 ChatGPT Academic"
+    ]
+  },
+  {
+    "objectID": "papers/interface-model-selection.html",
+    "href": "papers/interface-model-selection.html",
+    "title": "Evaluation of Soil-Structure Interface Models",
+    "section": "",
+    "text": "Back to topCitationFor attribution, please cite this work as:\nWang, Hai-Lin, Zhen-Yu Yin, Yin-Fu Jin, and Xiao-Qiang Gu. n.d.\n“Evaluation of Soil-Structure Interface Models.”\nJournal of Geotechnical and Geoenvironmental Engineering 150\n(7). https://doi.org/10.1061/JGGEFK.GTENG-11486.",
+    "crumbs": [
+      "Papers",
+      "Evaluation of Soil-Structure Interface Models"
+    ]
+  }
+]
