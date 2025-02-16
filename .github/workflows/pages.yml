@@ -27,7 +27,6 @@ jobs:
       - name: Build mkdocs documentation
         run: |
           pdm run mkdocs build
-          echo "hailin.wang" > site/CNAME
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v4
