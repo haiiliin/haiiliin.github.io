@@ -7,7 +7,6 @@ edit_uri: edit/main/docs
 nav:
   - Home:
     - index.md
-    - Publications: publications.md
   - Blog:
     - blog/index.md
     - blog/tags.md
@@ -50,9 +49,6 @@ theme:
 plugins:
   - bibtex:
       bib_file: docs/bibliography.bib
-  - gen-files:
-      scripts:
-        - generate-publications.py
   - blog:
       blog_dir: blog
       blog_toc: true
