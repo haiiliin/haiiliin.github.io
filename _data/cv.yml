@@ -3,7 +3,6 @@ cv:
   headline: Ph.D. candicate at Tongji University & The Hong Kong Polytechnic University
   location: Shanghai, China
   email: hailin.wang@connect.polyu.hk
-  photo:
   phone: +86 176 2339 6448
   website: https://hailin.wang/
   social_networks:
@@ -15,14 +14,7 @@ cv:
       username: 0000-0001-5759-2455
   custom_connections: []
   sections:
-    About me:
-      - I am Hailin Wang, a passionate researcher and developer in the field of
-        geotechnical engineering. My work focuses on the application of
-        multiscale micromechanical methods to understand the behavior of
-        geomaterials under various loading conditions. I have a strong interest
-        in computational modeling, numerical simulations, and the integration of
-        machine learning techniques into geotechnical analysis.
-    education:
+    Education:
       - institution: Huazhong University of Science and Technology
         area: Civil Engineering
         degree: BEng
@@ -57,8 +49,8 @@ cv:
           - "Thesis: Multiscale Modelling of Granular Soils with Inherent and
             Induced Fabric Anisotropy"
           - "Advisor: Prof. Zhen-Yu Yin"
-    projects:
-      - name: "[abqpy]([https://github.com/](https://github.com/haiiliin/abqpy))"
+    Projects:
+      - name: "abqpy"
         date:
         start_date: 2022-06
         end_date: present
@@ -67,7 +59,7 @@ cv:
         highlights:
           - Enable intelligent type hinting for Abaqus/Python scripting
           - 300+ GitHub stars, 50+ forks
-    publications:
+    Publications:
       - title: Uncertainty Quantification of Soil–Structure Interface Properties with an
           Enhanced Hypoplastic Interface Model
         authors:
@@ -77,6 +69,7 @@ cv:
           - Xiao-Qiang Gu
         journal: International Journal of Geomechanics
         date: 2024-06
+        doi: 10.1061/IJGNAI.GMENG-9248
       - title: Evaluation of Soil–Structure Interface Models
         authors:
           - "**Hai-Lin Wang**"
@@ -84,10 +77,9 @@ cv:
           - Yin-Fu Jin
           - Xiao-Qiang Gu
         summary:
-        doi: 10.1061/JGGEFK.GTENG-11486
-        url:
         journal: Journal of Geotechnical and Geoenvironmental Engineering
         date: 2024-07
+        doi: 10.1061/JGGEFK.GTENG-11486
       - title: Evaluation of Soil–Structure Interface Models Considering Cyclic Loading
           Effect
         authors:
@@ -126,12 +118,7 @@ cv:
         journal: International Journal of Solids and Structures
         date: 2026-10
         doi: 10.1016/j.ijsolstr.2026.114263
-    selected_honors:
+    Honors:
       - bullet: National Scholarship (2017-2019)
       - bullet: Merit Student of Huazhong University of Science and Technology
           (2017-2019)
-    skills:
-      - label: Research Areas
-        details: Geotechnics, Geomechanics
-      - label: Languages
-        details: Python, C++, Matlab, Fortran
