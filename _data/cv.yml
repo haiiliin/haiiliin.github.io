@@ -6,12 +6,18 @@ cv:
   phone: +86 176 2339 6448
   website: https://hailin.wang/
   social_networks:
-    - network: X
-      username: haiiliin
-    - network: GitHub
-      username: haiiliin
     - network: ORCID
       username: 0000-0001-5759-2455
+    - network: ResearchGate
+      username: Hailin-Wang-4
+    - network: GitHub
+      username: haiiliin
+    - network: X
+      username: haiiliin
+    - network: Instagram
+      username: haiiliinw
+    - network: YouTube
+      username: haiiliin
   custom_connections: []
   sections:
     Education:
