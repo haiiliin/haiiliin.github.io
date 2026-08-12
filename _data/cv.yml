@@ -50,7 +50,7 @@ cv:
             Induced Fabric Anisotropy"
           - "Advisor: Prof. Zhen-Yu Yin"
     Projects:
-      - name: "abqpy"
+      - name: "https://github.com/haiiliin/abqpy"
         date:
         start_date: 2022-06
         end_date: present
