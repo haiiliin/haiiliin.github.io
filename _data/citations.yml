@@ -1,16 +1,16 @@
 metadata:
-  last_updated: '2026-08-21'
+  last_updated: '2026-08-28'
 papers:
   -Bb_nmAAAAAJ:2osOgNQ5qMEC:
     citations: 10
     title: "Evaluation of Soil\u2013Structure Interface Models"
     year: '2024'
   -Bb_nmAAAAAJ:Tyk-4Ss8FVUC:
-    citations: 1
+    citations: 2
     title: Integration of critical state theory into a micromechanical model for granular materials accounting for fabric evolution
     year: '2025'
   -Bb_nmAAAAAJ:W7OEmFMy1HYC:
-    citations: 1
+    citations: 2
     title: A generalized anisotropic failure criterion for granular materials based on a multi-scale micromechanical approach
     year: '2026'
   -Bb_nmAAAAAJ:Y0pCki6q_DkC:
@@ -21,6 +21,10 @@ papers:
     citations: 0
     title: 'An Anisotropic Micromechanical Model for Granular Materials: Development and Validation of a Novel Contact Law'
     year: '2026'
+  -Bb_nmAAAAAJ:_FxGoFyzp5QC:
+    citations: 0
+    title: Micromechanics-inspired modeling of granular materials
+    year: '2026'
   -Bb_nmAAAAAJ:eQOLeE2rZwMC:
     citations: 0
     title: "\u57FA\u4E8E\u5FAE\u89C2\u529B\u5B66\u6A21\u578B\u7684\u7802\u571F\u975E\u5171\u8F74\u7279\u6027\u7814\u7A76"
@@ -29,6 +33,10 @@ papers:
     citations: 7
     title: "Uncertainty Quantification of Soil\u2013Structure Interface Properties with an Enhanced Hypoplastic Interface Model"
     year: '2024'
+  -Bb_nmAAAAAJ:ufrVoPGSRksC:
+    citations: 0
+    title: Unveiling anisotropic elasticity of granular materials under true triaxial conditions
+    year: '2027'
   -Bb_nmAAAAAJ:zYLM7Y9cAGgC:
     citations: 4
     title: "Evaluation of Soil\u2013Structure Interface Models Considering Cyclic Loading Effect"
